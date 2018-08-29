@@ -1,0 +1,971 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+
+/*我的css*/
+html, body{
+    height: 100%;
+}
+
+body{
+    font-size: 15px;
+    line-height: 1.50;
+    color: #333333;
+    background-color: #fff;
+    position: relative;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+section{
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/*     -------------------------     */
+
+/*
+header开始
+ */
+header{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+.logo{
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+
+.site-name{
+    font-size: 36px;
+    /*transition: font-size 1s;*/
+    transition: all 0.3s ease-in-out;
+}
+
+.site-name a{
+    color: #fff;
+}
+
+.site_slogan{
+    font-size: 12px;
+}
+
+header .col-md-8{
+    margin-top: 15px;
+}
+
+.navbar-default{
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+    font-size: 18px;
+}
+.navbar-default .navbar-nav>li.active>a:hover, .navbar-default .navbar-nav>li>a:hover{
+    color: #55acee;
+}
+
+.navbar-default .navbar-nav>li.active>a{
+    background-color: transparent;
+    color: #55acee;
+}
+
+.navbar-default .navbar-nav>.active>a:hover{
+    background-color: transparent;
+}
+
+.fiexed-header-on header{
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.fiexed-header-on .col-md-8{
+    margin-top: 5px;
+}
+
+.fiexed-header-on .logo{
+    transform: scale(0.8);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.fiexed-header-on .site-name{
+    font-size: 24px;
+}
+
+/*
+header结束
+ */
+
+
+/*
+首页开始：selection1
+ */
+.scroll_header{
+    top: 25px;
+    width: 100%;
+    position: relative;
+}
+
+.scroll_header::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+}
+
+/*
+首页结束：selection1
+ */
+
+
+/*
+首页开始：selection2
+ */
+
+.index{
+    top: -80px;
+    position: relative;
+    width: 100%;
+}
+
+.bg-color-white {
+    background-color: #fff;
+}
+
+nav {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    line-height: 50px;
+    font-family: 'Helvetica', 'STHeiti', 'Microsoft YaHei', Arial, sans-serif;
+    /*background-position: left -140px !important;*/
+}
+
+.container {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.col3 {
+    width: 1000px;
+    display: block;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+ul.no-bullets {
+    list-style: none;
+}
+
+.main-nav {
+    width: 700px;
+}
+
+.left {
+    display: block;
+    float: left;
+}
+
+.main-nav > li {
+    width: 16.6667%;
+    float: left;
+    height: 50px;
+}
+
+.main-nav .has-sub-menu > a {
+    padding-right: 10px;
+}
+
+.main-nav > li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #384d66;
+}
+
+
+.main-nav .has-sub-menu > a {
+    padding-right: 10px;
+}
+
+.main-nav > li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-nav .menu-destination > a:after {
+    margin-left: 20px;
+}
+
+nav .has-sub-menu > a:after {
+    position: absolute;
+    left: 50%;
+    top: 19px;
+    width: 6px;
+    height: 6px;
+    content: '';
+    border-bottom: #384d66 1px solid;
+    border-right: #384d66 1px solid;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.menu-destination .sub-menu {
+    padding: 10px 0 15px 20px;
+    background-image: none;
+    box-sizing: border-box;
+}
+
+.menu_destination{
+    z-index: 1000;
+}
+
+.sub-menu {
+    background: #fff url(../images) no-repeat 0 0;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    display: none;
+    width: 1000px;
+    text-align: left;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #ccc;
+}
+
+.menu-destination .destination-list-item {
+    padding: 10px 20px 0 0;
+    overflow: hidden;
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.menu-destination .destination-list-item .title {
+    font-size: 16px;
+    color: #588CB5;
+    padding: 0 10px 5px 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #8CA6C2;
+}
+
+.sub-menu .title {
+    line-height: 1.4em;
+}
+
+.menu-destination .destination-list-item .destination-list {
+    padding-top: 8px;
+    overflow: hidden;
+}
+
+.menu-destination .destination-list-item .name {
+    float: left;
+    padding: 0 8px;
+    margin: 0 0 10px -1px;
+    color: #596875;
+    border-left: 1px solid #ccc;
+    white-space: nowrap;
+    line-height: 13px;
+    font-size: 13px;
+}
+
+
+
+.main-nav > li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-nav .menu-product > a:after {
+    margin-left: 28px;
+}
+
+.menu-product .sub-menu{
+    height: 420px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.menu-product .col2 {
+    float: none;
+}
+
+.menu-product .col2 {
+    padding: 0 10px;
+}
+
+.sub-menu .css-cell {
+    vertical-align: top;
+}
+
+.css-cell {
+    display: table-cell;
+}
+
+.col2 {
+    width: 660px;
+}
+
+.right {
+    display: block;
+    float: right;
+}
+
+
+.sub-menu .title {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+ul.no-bullets {
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+.menu-product ul li {
+    margin-right: 12px;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+.menu-product ul li a.sig-trip {
+    background-size: 157px;
+    background-position: -12px 0;
+}
+
+.menu-product ul li a {
+    background-image: url("../images/square.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 145px;
+    padding-top: 145px;
+    border-radius: 100%;
+    position: relative;
+    display: block;
+}
+
+.menu-product ul li div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 145px;
+    height: 22px;
+    background-color: #fff;
+    line-height: 22px;
+}
+
+.main-nav > li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.menu-product ul li a.bundle {
+    background-position: 0 -145px;
+}
+
+.menu-product ul li a.small-luxury-group {
+    background-position: 0 -290px;
+}
+
+.menu-product ul li a.cruise {
+    background-position: 0 -590px;
+}
+
+.menu-product ul li a.villa {
+    background-position: 0 -440px;
+}
+
+.menu-product ul li a.hotel {
+    background-position: 0 -725px;
+}
+
+.menu-product ul li a.mini {
+    background-position: 0 -870px;
+}
+
+.menu-product ul li a.bespoke {
+    background-position: 0 -1025px;
+}
+
+.sub-menu li {
+    height: auto;
+    line-height: 1.4em;
+}
+
+.menu-product .sub-menu .col1 {
+    height: 420px;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+.menu-product .col1 {
+    background: #394d66;
+    margin: -1px 0 0 0;
+}
+
+.menu-product .col1{
+    float: none;
+    position: relative;
+}
+
+.sub-menu .css-cell {
+    vertical-align: top;
+}
+
+.css-cell {
+    display: table-cell;
+}
+
+.col1 {
+    width: 320px;
+}
+
+.menu-product .col1 a {
+    display: inline;
+    text-align: left;
+}
+
+.main-nav > li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav.sticky-nav .guest {
+    line-height: 60px;
+}
+
+.right {
+    display: block;
+    float: right;
+}
+
+nav.sticky-nav .guest form {
+    margin-right: 20px;
+}
+
+
+nav.sticky-nav form {
+    display: block;
+}
+
+.left {
+    display: block;
+    float: left;
+}
+
+.relative {
+    position: relative;
+}
+
+nav form {
+    margin-top: 15px;
+}
+
+nav form .input-text {
+    height: 33px;
+    width: 230px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    line-height: 33px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.input-text {
+    padding: 12px 10px;
+    font-size: 0.9em;
+}
+
+nav form .button {
+    background: transparent;
+    color: #cb5977;
+    border-color: transparent;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: none;
+    padding: 0;
+    height: 33px;
+    width: 33px;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+.input-submit{
+    cursor: pointer;
+}
+
+[class*=" icon-"] {
+    font-family: 'Zanadu-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.clearfix {
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+
+
+.footer_copyright{
+    margin: 0;
+    padding: 0;
+}
+
+.footer_copyright_inner{
+    padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    margin: auto;
+    width: 1190px;
+}
+
+.footer_copyright_nav{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.space{
+    margin: 0 10px;
+    color: #ccc;
+    padding: 0;
+}
+
+.footer_copyright_info{
+    padding: 10px 0;
+    line-height: 22px;
+    color: #999;
+    margin: 0;
+}
+
+.footer_copyright_info_cert{
+    margin: 0;
+    padding: 0;
+}
+
+.footer_copyright_info_cert p{
+    margin: 0;
+    padding: 0;
+}
+
+.footer_copyright_info_subsites{
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    color: #c7ddef;
+}
+
+.footer_copyright_othersites{
+    margin: 25px 0;
+    padding: 0;
+}
+
+.footer_copyright_othersites a{
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+    line-height: 1000px;
+    padding: 0;
+}
+
+.sites1{
+    background-repeat: no-repeat;
+    background-position: -205px -148px;
+    background-image: url(../images/footer.png);
+}
+
+.sites2{
+    background-repeat: no-repeat;
+    background-position: -205px -111px;
+    background-image: url(../images/footer.png);
+}
+
+.sites3{
+    background-repeat: no-repeat;
+    background-position: -205px -74px;
+    background-image: url(../images/footer.png);
+}
+
+.sites4{
+    background-repeat: no-repeat;
+    background-position: -205px -37px;
+    background-image: url(../images/footer.png);
+}
+
+.sites5{
+    background-repeat: no-repeat;
+    background-position:-205px 0;
+    background-image: url(../images/footer.png);
+}
+
+.sites6{
+    background-repeat: no-repeat;
+    background-position:0 -155px;
+    background-image: url(../images/footer.png);
+}
+/*
+首页结束：selection2
+ */
+
+
+/*
+首页开始：selection1
+ */
+
+
+/*
+首页结束：selection1
+ */
+
+
+
