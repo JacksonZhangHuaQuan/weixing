@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <title>微行网</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/liebiao.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="css/liebiao.css">
-
-
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:"/ShowScore",
+                dataType:"json",
+                type:"post",
+                success:function (result) {
+                    for(var i=0;i<result.length;i++){
+                        var $node=$(' <a href="show.html?strategy_id='+ result[i].strategy_id+'">' +
+                            '            <div class="center_center_21 ">\n' +
+                            '                <div class="image1"><img src="'+ result[i].strategy_firstimg+'"></div>\n' +
+                            '                <div class="describe">\n' +
+                            '                    <div class="describe1">'+ result[i].strategy_describe+'</div>\n' +
+                            '                    <h3 class="h3_title">'+ result[i].strategy_describe+'</h3>\n' +
+                            '                </div>\n' +
+                            '            </div>\n' +
+                            '        </a>')
+                        $(".zhanshi").append($node)
+                    }
+                }
+            })
+        })
+    </script>
 </head>
-<body>
+<body style="background-color: #e1ebf3">
+
 <header class="navbar-fixed-top">
     <div class="container">
         <div class="row">
@@ -51,7 +74,7 @@
                                 <li><a href="#footer">服务</a></li>
                                 <li><a href="login.html" style="color: red">登录</a></li>
                                 <li><a href="login.html" style="color: red">注册</a></li>
-                                <li><a href="userInfo/UserInfoShow.html">个人中心</a></li>
+                                <li><a href="userInfo/UserInfoShow.html">联系我们</a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,6 +83,7 @@
         </div>
     </div>
 </header>
+<a name="top"></a>
 <section class="scroll_header">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -117,7 +141,6 @@
         </a>
     </div>
 </section>
-<a name="top"></a>
 
 <section class="index" style="padding: 0;z-index: 100">
     <nav class="bg-color-white sticky-nav" style="background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 100%;">
@@ -308,34 +331,11 @@
     </nav>
 </section>
 
-<div id="beijing" style="top: -135px; position: relative;">
-    <a href="liebiao.html"><div class="gonglue">
-        <h2 class="h_one">最热攻略</h2>
-        <h2 class="h_two">为您提供最热攻略，让您的出行不再枯燥。</h2>
-    </div>
-    </a>
-    <a href="dangji.html"><div class="gonglue1">
-        <h2 class="h_one">热门景点</h2>
-        <h2 class="h_two">为您提供全国热门景点，让您的旅游不再迷茫。</h2>
-    </div>
-    </a>
-    <a href="qiongyou.html"><div class="gonglue2">
-        <h2 class="h_one">穷游出行</h2>
-        <h2 class="h_two">一个人的旅行，在路上遇见最真实的自己。</h2>
-    </div>
-    </a>
-    <a href="duanjia.html"><div class="gonglue3">
-        <h2 class="h_one">短假出游</h2>
-        <h2 class="h_two">出去旅行，不是去看风景，而是去寻回自己——最本真的自己。</h2>
-    </div>
-    </a>
-    <a href="dangji.html"><div class="gonglue4">
-        <h2 class="h_one">当季旅行</h2>
-        <h2 class="h_two">到海岸边嬉水，在古镇河道边漫步,带您领略不一样的夏天。</h2>
-    </div>
-    </a>
-    <a href="#top"><div class="beijing_footer"><div class="footer_1">返回顶部</div></div></a>
+<div class="zhanshi center-block" style="position: relative;width:1200px; display:inline-block !important; margin: -50px 170px; padding-bottom: 30px;padding-top: 30px">
+
+
 </div>
+<a href="#top"><div class="beijing_footer"><div class="footer_1">返回顶部</div></div></a>
 <div class="footer" id="#footer">
     <div class="footer_copyright">
         <div class="footer_copyright_inner">
@@ -421,13 +421,8 @@
     </div>
 </div>
 
-
-<script src="js/modernizr-3.6.0.min.js"></script>
-<script src="js/jquery-3.3.1.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/header_footer.js"></script>
 <script src="js/bootstrap.js"></script>
-
-
 </body>
 </html>

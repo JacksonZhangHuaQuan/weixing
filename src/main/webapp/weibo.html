@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+
+<html xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta property="og:type" content="webpage" />
+    <meta property="og:url" content="http://www.zhanghuaquan.top/show.html" />
+    <meta property="og:title" content="旅友集合队" />
+    <meta property="og:description" content="史上最完美的旅游攻略网站，快来加入我们吧" />
+    <!--选填-->
+    <meta property="og:image" content="网页的显示图片" />
+    <meta name="weibo:webpage:create_at" content="网页的创建时间" />
+    <meta name="weibo:webpage:update_at" content="网页的更新时间" />
+
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+　　<tr>
+    <td width="100px">地图地址</td>
+    <td>
+        <input class="input1" type="text" name="mapaddress"   id="mapaddress" value="" style="width:400px" />
+        <input type="button" value="定位" onclick="mapsarch()" style="margin-right: 10px;"/>
+        经纬度：<span id="jw"></span>
+    </td>
+</tr>
+<input type="hidden" id="addresspoint" name="addresspoint"/>
+<wb:like appkey="3827231191"></wb:like>
+
+<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+<script src="http://webapi.amap.com/maps?v=1.3&key=bfb69f8058d314c0e566a07943c7bd75"></script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<tr>
+    <td colspan="2">
+        <div id="mapContainer" style="width:100%;height: 400px;"></div>
+        <div class="button-group" style="display:none">
+            <input id="en" type="button" class="button" value="显示英文底图" />
+            <input id="zh_en" type="button" class="button" value="显示中英文对照底图" />
+            <input id="zh_cn" type="button" class="button" value="显示中文底图" />
+        </div>
+    </td>
+</tr>
+<script type="text/javascript">
+    mapsarch();
+    function mapsarch(){
+        var address=$('#mapaddress').val();
+        $.ajax({
+            type: "get",
+            url : "http://restapi.amap.com/v3/geocode/geo?key=389880a06e3f893ea46036f030c94700&s=rsv3&city=35&address="+address,
+            dataType:'json',
+            success: function(data){
+            $('#jw').html(data['geocodes'][0]['location']);
+            $('#addresspoint').val(data['geocodes'][0]['location']);
+            setmap(data['geocodes'][0]['location']);
+        }
+    });
+    }
+    function setmap(point){
+        var jw= new Array(); //定义一数组
+        jw=point.split(","); //字符分割
+        var jd=parseFloat(jw[0]);//经度
+        var wd=parseFloat(jw[1]);//纬度
+//初始化地图对象，加载地图
+        var map = new AMap.Map("mapContainer",{
+            resizeEnable: true,
+//二维地图显示视口
+            view: new AMap.View2D({
+//地图中心点
+                center:new AMap.LngLat(jd,wd),
+//地图显示的缩放级别
+                zoom:18
+            })
+        });
+//地图中添加地图操作ToolBar插件
+        map.plugin(["AMap.ToolBar"], function(){
+            var toolBar = new AMap.ToolBar();
+            map.addControl(toolBar);
+        });
+//地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
+        addMarker();
+//添加marker标记
+        function addMarker(){
+            map.clearMap();
+            var marker = new AMap.Marker({
+                map: map,
+//位置
+                position: new AMap.LngLat(jd,wd),
+//复杂图标
+                icon: "http://webapi.amap.com/images/0.png"
+            });
+//鼠标点击marker弹出自定义的信息窗体
+            AMap.event.addListener(marker,'click',function(){
+                infoWindow.open(map,marker.getPosition());
+            });
+        }
+//实例化信息窗体
+        var infoWindow = new AMap.InfoWindow({
+            isCustom:true,  //使用自定义窗体
+//content:createInfoWindow('CMK&nbsp;&nbsp;',"<img src='http://baidu.com/images/logo.png
+
+            'style='
+            position:relative;float:left;margin:0 5px 5px 0;width:80px;height: 80px;'>Address：No.65, 21F, COFCO Property Group Centre Building, Xinan Street, Baoan District, Shenzhen, China <br/>Email：sales@cmktec.com<br/>"),
+        offset:new AMap.Pixel(16, -45)//-113, -140
+    });
+//构建自定义信息窗体
+        function createInfoWindow(title,content){
+            var info = document.createElement("div");
+            info.className = "info";
+//可以通过下面的方式修改自定义窗体的宽高
+//info.style.width = "400px";
+// 定义顶部标题
+            var top = document.createElement("div");
+            var titleD = document.createElement("div");
+            var closeX = document.createElement("img");
+            top.className = "info-top";
+            titleD.innerHTML = title;
+            closeX.src = "http://webapi.amap.com/images/close2.gif";
+            closeX.onclick = closeInfoWindow;
+            top.appendChild(titleD);
+            top.appendChild(closeX);
+            info.appendChild(top);
+// 定义中部内容
+            var middle = document.createElement("div");
+            middle.className = "info-middle";
+            middle.style.backgroundColor='white';
+            middle.innerHTML = content;
+            info.appendChild(middle);
+// 定义底部内容
+            var bottom = document.createElement("div");
+            bottom.className = "info-bottom";
+            bottom.style.position = 'relative';
+            bottom.style.top = '0px';
+            bottom.style.margin = '0 auto';
+            var sharp = document.createElement("img");
+            sharp.src = "http://webapi.amap.com/images/sharp.png";
+            bottom.appendChild(sharp);
+            info.appendChild(bottom);
+            return info;
+        }
+//关闭信息窗体
+        function closeInfoWindow(){
+            map.clearInfoWindow();
+        }
+        map.setLang('en');
+    }
+</script>
+
+</body>
+</html>

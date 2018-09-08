@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta charset="UTF-8">
+    <title>微行网</title>
+
+    <link rel="stylesheet" href="css/layui/layui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/Review.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/ShowMsg.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <style type="text/css">
+        .weather{
+            width: 60px;
+            padding-left: 8px;
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.9&key=bfb69f8058d314c0e566a07943c7bd75"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+
+<header class="navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo">
+                    <a href="www.zhanghuaquan.top">
+                        <img src="images/logo.jpg" style="width: 52px; height: 52px">
+                    </a>
+                </div>
+                <div>
+                    <div class="site-name"><a href="zhanghuaquan.top">微行网</a></div>
+                    <div class="site_slogan">
+                        做最用心的旅游攻略
+                        <a href="www.zhanghuaquan.top">WeiXing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="weixing.html">首页</a></li>
+                                <li><a href="#footer">关于</a></li>
+                                <li><a href="#footer">服务</a></li>
+                                <li><a href="login.html" style="color: red">登录</a></li>
+                                <li><a href="login.html" style="color: red">注册</a></li>
+                                <li><a href="userInfo/UserInfoShow.html">个人中心</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="scroll_header">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/back1.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/back2.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/back3.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/back4.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/back5.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<section class="index" style="padding: 0">
+    <nav class="bg-color-white sticky-nav" style="height: 102px;z-index:6;background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 100%;">
+        <div class="container">
+            <div class="col3" style="margin-top: 20px">
+                <a href="weixing.html">
+                    <img src="//cdn-img.zanadu.cn/assets/50d959a2/public/images/logo/zanadu/bird.png" height="60" class="left logo hidden margin-top-10">
+                </a>
+
+                <ul class="main-nav no-bullets left">
+                    <li class="menu-destination has-sub-menu js-menu-destination" data-submenu-id="menu_destination">
+                        <a href="destintination.html" class="">目的地</a>
+
+                        <div class="sub-menu" id="menu_destination">
+                            <div class="destination-list-item">
+                                <div class="title">热门目的地</div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">日本</a>
+                                    <a class="name" href="destintination.html">夏威夷</a>
+                                    <a class="name" href="destintination.html">泰国</a>
+                                    <a class="name" href="destintination.html">马尔代夫</a>
+                                    <a class="name" href="destintination.html">挪威</a>
+                                    <a class="name" href="destintination.html">南极与北极</a>
+                                    <a class="name" href="destintination.html">云南</a>
+                                    <a class="name" href="destintination.html">浙江</a>
+                                    <a class="name" href="destintination.html">海南</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">东亚 </div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">韩国</a>
+                                    <a class="name" href="destintination.html">日本</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">拉丁美洲</div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">巴西</a>
+                                    <a class="name" href="destintination.html">古巴</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">中东与北非</div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">阿联酋</a>
+                                    <a class="name" href="destintination.html">卡塔尔</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="destination-list-item">
+                                <div class="title">西欧与地中海</div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">德国</a>
+                                    <a class="name" href="destintination.html">法国</a>
+                                    <a class="name" href="destintination.html">土耳其</a>
+                                    <a class="name" href="destintination.html">英国</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">大洋洲</div>
+                                <div class="destination-list">
+                                    <a class="name" href="destintination.html">澳大利亚</a>
+                                    <a class="name" href="destintination.html">新西兰</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">北欧</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/1374.html">挪威</a>
+                                    <a class="name" href="/destination/1381.html">瑞典</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">南部非洲</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/1482.html">纳米比亚</a>
+                                    <a class="name" href="/destination/28.html">南非</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="destination-list-item">
+                                <div class="title">东南亚与南亚</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/306.html">马尔代夫</a>
+                                    <a class="name" href="/destination/289.html">马来西亚</a>
+                                    <a class="name" href="/destination/348.html">泰国</a>
+                                    <a class="name" href="/destination/335.html">新加坡</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">东欧与俄罗斯</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/546.html">俄罗斯</a>
+                                    <a class="name" href="/destination/455.html">捷克</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">北美</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/48.html">加拿大</a>
+                                    <a class="name" href="/destination/56.html">美国</a>
+                                </div>
+                            </div>
+                            <div class="destination-list-item">
+                                <div class="title">东非</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/808.html">肯尼亚</a>
+                                    <a class="name" href="/destination/14.html">毛里求斯</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="destination-list-item">
+                                <div class="title">南极与北极</div>
+                                <div class="destination-list">
+                                    <a class="name" href="/destination/1634.html">朗伊尔城</a>
+                                    <a class="name" href="/destination/1328.html">南极洲</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="menu-product has-sub-menu" data-submenu-id="menu_product">
+                        <a href="season.html" class="">预订行程</a>
+
+                        <div class="sub-menu css-table" id="menu_product">
+                            <div class="css-cell col2">
+                                <div class="title margin-bottom-20 padding-top-20 margin-left-20">预订行程</div>
+                                <ul class="no-bullets margin-left-20 text-center">
+                                    <li>
+                                        <a href="/signaturetrip.html" class="sig-trip">
+                                            <div>赞品旅程</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/bundle.html" class="bundle">
+                                            <div>海外自由行</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/smallluxurygroup.html" class="small-luxury-group">
+                                            <div>轻奢小团</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/cruise.html" class="cruise">
+                                            <div>大航海时代</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/minipackage.html" class="mini">
+                                            <div>国内短假</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/signaturetrip/bespoke.html" class="bespoke">
+                                            <div>私人定制</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="css-cell col1">
+                                <a href="#" rel="nofollow" target="_blank"><img src="//cdn-img.zanadu.cn/assets/50d959a2/public/images/app-download-banner/320x420.jpg" width="100%"> </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/news.html" class="">活动</a>
+                    </li>
+                </ul>
+                <div class="left guest">
+                    <form class="js-search-form left search-form relative" action="/search.html" method="GET">
+                        <input class="input-text left js-nav-search-keyword ac_input" id="SearchForm_keyword_nav" autocomplete="off" placeholder="目的地 / 游玩天数／花费" type="text" name="SearchForm[keyword]">
+                        <span class="glyphicon glyphicon-search" style="height: 33px; width: 33px; font-size: 20px; margin-left: -25px; top: -8px; line-height: 33px">
+                            <input class="input-submit left button" value="" type="submit">
+                        </span>
+                        <div class="clearfix"></div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="Fbg-image-clouds Fsection-padding">
+    <div class="Fshare" style="margin: 0px ;left: 114px;top: 260px; position: fixed;width:35px;z-index: 3;">
+        <a class="btn_share" style="overflow: hidden">
+            <span>
+                <wb:share-button appkey="3827231191" addition="number" type="button"></wb:share-button>
+            </span>
+        </a>
+        <a class="btn_like" style="overflow: hidden">
+            <span><wb:like appkey="3827231191"></wb:like></span>
+        </a>
+    </div>
+    <div class="Fcontainer Fmargin-bottom-20">
+        <div class="Fcol1">
+            <div class="Ftabs-wrap Fpink Fgroup-detail-tabs Fmargin-bottom-40">
+                <div class="Fborder-sloid">
+
+                </div>
+                <div class="Ftabs-control Fbg-gr-pink Ftwo-tabs">
+                    <a href="#" class="Factive">攻略展示</a>
+                </div>
+                <div id="Fgroup-itineraries" class="Ftab Fpadding-20 Factive" data-hasmap="0" style="display: block"></div>
+                <div class="Fitinerary-list">
+                    <div class="Frelative Fitinerary-map-wrapper">
+                        <div id="container" style="width: 640px; height: 420px; margin-left: 10px"></div>
+                        <div id="tip" style="line-height: 24px"></div>
+                    </div>
+                    <ul class="Fsimple-bullets">
+                        <li class="Fexpandable">
+                            <h3><a href="#" class="Ftitle">10月2日 上海三日游</a></h3>
+                            <ul class="layui-timeline">
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Fcol2">
+            <div class="groupchat_show" style="height: 560px; width: 320px; border-radius: 8px; background-color: #cb5977; border: 1px solid black; z-index: 10000; position: absolute;top: 450px; display: none">
+                <div style="height: 540px; width: 300px; margin: 10px auto; background-color: #cb5977">
+                    <h3 align="center" class="groupchat_header">天津五天四夜游</h3>
+                    <div class="groupchat_showmessages" style="background-color: #fff; width: 100%; height: 400px;border: 1px solid black; overflow: auto; overflow-x: hidden">
+
+                    </div>
+                    <div style="background-color: #fff; width: 100%; height: 80px;border: 1px solid black; margin-top: 10px">
+                        <form>
+                            <textarea class="groupchat_input" rows="3" cols="30" ></textarea>
+                            <button  class="groupchat_sendmessage" type="button" style="position: relative; left: 10px; top: -20px; width:50px;background-color: #cb5977; border-radius: 5px;">发送</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="Frating-sidebar">
+                <div class="Fribbon-button Fright Fdark-pink Fcolor-white">
+                    <div>
+                        <span class="Ficon-write">1 </span>
+                        <span class="Freview">条评论</span>
+                    </div>
+                    <div class="Ftail"></div>
+                    <div class="Ffold"></div>
+                </div>
+                <h4 class="Ftext-center" style="margin-left: 20px">您可以第一个评价这个攻略哦</h4>
+                <div class="Fbutton-wrapper Ftext-center">
+                    <div class="Fexpandable">
+                        <span class="Fbutton Fwrite-review Fbtn-expand" style="margin-right: 85px">
+                            <span class="Ficon-write">发表评论</span>
+                        </span>
+                        <div class="Fexpand" style="display: block;margin-right: 60px">请您<a href="login.html">免费注册会员</a>，享受此功能<br>
+                            如已经注册，请<a href="login.html">登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fwanna-go">
+                <div class="Fribbon-button Fright Fpink Fcolor-white" style="float: right">
+                    <div>
+                        <span class="Fnumber" style="font-size: 1.4em">20</span>
+                        <span id="Fwanna-go-text">人想去</span>
+                    </div>
+                    <div class="Ftail"></div>
+                    <div class="Ffold"></div>
+                </div>
+                <div class="Fribbon-button Fright Fpink Fcolor-white Fjoin" style="position: absolute;top: 90px;right: -10px">
+                    <div>
+                        <button class="groupchat_join" style="background: padding-box;border: 0px;width: 70px;font-size: 1.2em;">加入群聊</button>
+                    </div>
+                    <div class="Ftail"></div>
+                    <div class="Ffold"></div>
+                </div>
+
+                <div class="Ftext-center Fmargin-bottom-20" style="margin-left: 80px;margin-top: 100px">
+                    <span class="Fbutton Fbtn-wish Fmargin-bottom-10 Fguest">
+                            <span class="Ficon-write">我也想去</span>
+                    </span>
+                </div>
+                <div class="Ftext-left Fhidden Fmargin-left-20" style="display: block">请告诉我们“我”是谁。<a href="login.html">登录</a>微行网，记录你的愿望单。</div>
+                <div class="Ftext-left Fhidden Fmargin-left-20" style="display: block">如果不是会员，请首先<a href="login.html">免费注册</a></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="Faccess">
+    <div class="Fcontainer">
+        <div class="Fcol3">
+            <div class="Freview-wrapper">
+                <div class="Fsummary-bar Fpadding-20 Fpadding-top-40">
+                    <div class="Fleft Fmargin-left-10 Fmargin-top-5 Fscore-count">
+                        <span class="Freview-count">1</span>
+                        条评论
+                    </div>
+                    <div class="Fright">
+                        <span class="Fbutton Fwrite-review Fbtn-expand">
+                            <span class="Ficon-write">发表评论</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="Fcontrol-bar Fcolor-white Frelative">
+                    <div class="Fcorner-left"></div>
+                    <div class="Fcorner-right"></div>
+                    <div class="Fleft Fcount">
+                        <span class="Freview-count">1</span>
+                        条，共
+                        <span class="Freview-count">1</span>
+                        条评论
+                    </div>
+                    <div class="Fright Ffilter Fmargin-left-20">≡</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer" id="#footer">
+    <div class="footer_copyright">
+        <div class="footer_copyright_inner">
+            <p class="footer_copyright_nav">
+                <a>关于我们</a>
+                <span class="space">|</span>
+                <a>联系我们</a>
+                <span class="space">|</span>
+                <a>联系客服</a>
+                <span class="space">|</span>
+                <a>合作招商</a>
+                <span class="space">|</span>
+                <a>商家帮助</a>
+                <span class="space">|</span>
+                <a>销售中心</a>
+                <span class="space">|</span>
+                <a>手机微行</a>
+                <span class="space">|</span>
+                <a>友情链接</a>
+                <span class="space">|</span>
+                <a>销售联盟</a>
+                <span class="space">|</span>
+                <a>微行社区</a>
+                <span class="space">|</span>
+                <a>风险监测</a>
+                <span class="space">|</span>
+                <a>隐私政策</a>
+                <span class="space">|</span>
+                <a>微行公益</a>
+                <span class="space">|</span>
+                <a>English Site</a>
+                <span class="space">|</span>
+                <a>Media & IR</a>
+            </p>
+            <div class="footer_copyright_info">
+                <div class="footer_copyright_info_cert">
+                    <p>
+                        <a>京公网安备 11000002000088号</a>
+                        <span class="space"></span>
+                        <a>京ICP证070359号</a>
+                        <span class="space"></span>
+                        <a>互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+                        <span class="space"></span>
+                        <span>新出发京零 字第大120007号</span>
+                    </p>
+                    <p>
+                        <span >互联网出版许可证编号新出网证(京)字150号</span>
+                        <span class="space"></span>
+                        <a>出版物经营许可证</a>
+                        <span class="space"></span>
+                        <a>网络文化经营许可证京网文[2014]2148-348号</a>
+                        <span class="space"></span>
+                        <span>违法和不良信息举报电话：4006561155</span>
+                    </p>
+                    <p>
+                        <span >Copyright © 2004 - 2018  京东JD.com 版权所有</span>
+                        <span class="space"></span>
+                        <a>消费者维权热线：4006067733</a>
+                        <span class="space"></span>
+                        <a>经营证照</a>
+                        <span class="space"></span>
+                        <span>(京)网械平台备字(2018)第00003号</span>
+                    </p>
+                </div>
+                <div class="footer_copyright_info_subsites">
+                    <p>
+                        <span>微行旗下的网站：</span>
+                        <a>微行钱包</a>
+                        <span class="space"></span>
+                        <a>微行云</a>
+                    </p>
+                </div>
+            </div>
+            <p class="footer_copyright_othersites">
+                <a class="sites1">经营性网站备案中心</a>
+                <a class="sites2">可信网站信用评估</a>
+                <a class="sites3">网络警察提醒你</a>
+                <a class="sites4">诚信网站</a>
+                <a class="sites5">中国互联网举报中心</a>
+                <a class="sites6">网络举报APP下载</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="js/layer/layer.js"></script>
+<script src="js/layui1/layui.js"></script>
+<script src="js/base.js"></script>
+
+<script src="js/modernizr-3.6.0.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/header_footer.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script>
+    var strategy_name;
+    $(function () {
+        var id;
+        var url = location.search; //获取url中"?"符后的字串
+        if (url.indexOf("?") != -1) {  //判断是否有参数
+            var str = url.substr(1); //从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
+            strs = str.split("=");  //用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
+            //直接弹出第一个参数 （如果有多个参数 还要进行循环的）
+            id = parseInt(strs[1]);
+        }
+        var user_id;
+        $.ajax({
+            url: "/getSession",
+            type: "post",
+            data: {"sessionid": "sessionkey"},
+            dataType: "json",
+            success: function (ret) {
+                user_id = ret[0].user_id;
+                if (ret == null) {
+                    setTimeout("javascript:window.location.href='login1.html'", 1000);
+                } else {
+                    console.log(ret);
+                    $("#bs-example-navbar-collapse-1 ul li:eq(3)").text("您好！，" + ret[0].user_name);
+                }
+            }, error: function (a, b, c) {
+                alert(a.responseText);
+                alert(a.status);
+                alert(c);
+
+            }
+        });
+
+        $(".Fwrite-review").click(function () {
+            if (user_id != null) {
+                layer.open({
+                    title: false,
+                    type: 2,
+                    closeBtn: 1, //不显示关闭按钮
+                    shade: [0.5],
+                    area: ['600px', '300px'],
+                    offset: 'auto',
+                    shadeClose: true,
+                    anim: 2,
+                    content: ['comment.html?strategy_id=' + id, 'no'], //iframe的url，no代表不显示滚动条
+                });
+            }
+            else {
+                layer.msg("请您登录后再进行评论！");
+            }
+        })
+        $.ajax({
+            url: "/ShowCommentServlet",
+            type: "post",
+            dataType: "json",
+            data: {"strategy_id": id},
+            success: function (result) {
+                $(".Freview-count").text(result.length);
+                $(".Ficon-write:eq(0)").text(result.length);
+                for (var i = 0; i < result.length; i++) {
+                    var $node = $(
+                        '                <div class="Freview-list-wrapper" style="height: 250px;padding: 30px;position: relative;top: 30px;left: -20px;width: 1000px;background: #FFFFFF">' +
+                        '                    <div class="Freview-iteam Frelative">' +
+                        '                        <div class="Fuser-info Fleft Ftext-center" style="position: absolute">' +
+                        '                            <div class="Favatar Frelative">' +
+                        '                                <a href="" class="Fuser-link" target="_blank">' +
+                        '                                    <img src="images/8fcfa6c391a45a5f38509124d5ccc627.jpeg" class="Favatar-img">' +
+                        '                                </a>' +
+                        '                                <div class="Fmargin-top-20 Fuser-name">' + result[i].user_name + '</div>' +
+                        '                            </div>' +
+                        '                        </div>' +
+                        '                        <div class="Fdetail Fright Frelative">' +
+                        '                            <hr class="Fseparator Fsolid Fmargin-top-5 Fmargin-bottom-5">' +
+                        '                            <div class="Fdata Fmargin-bottom-10">' + result[i].comment_date + '</div>' +
+                        '                            <div class="Fleft Fcontent">' +
+                        '                                <div class="Freview-text Fcolor-default">' + result[i].comment_content + '</div>' +
+                        '                            </div>' +
+                        '                            <div class="Fuser-ratings Fright">' +
+                        '                                <div class="Foverall-rating">' +
+                        '                                    <ul class="Fno-bullets">' +
+                        '                                        <li class="Frating-title Ftext-right">评分：</li>' +
+                        '                                        <li class="Fleft Foverall-score">' +
+                        '                                            <span class="Fright">分</span>' +
+                        '                                            <span class="Fright Fscore">' + result[i].comment_num + '</span>' +
+                        '                                        </li>' +
+                        '                                    </ul>' +
+                        '                                </div>' +
+                        '                            </div>' +
+                        '                        </div>' +
+                        '                    </div>' +
+                        '                </div>' +
+                        '            </div>');
+                    $(".Fcontrol-bar").append($node);
+                }
+            }
+        })
+
+        var imgs;
+        var address;
+        $.ajax({
+            url: "/SelectOneStrategyServlet",
+            type: "post",
+            dataType: "json",
+            data: {"strategy_id": id},
+            success: function (result) {
+                strategy_name=result[0].strategy_title;
+                var img = result[0].strategy_photos;
+                imgs = img.split(",");
+                address = result[0].strategy_address;
+                var $money = ('<h4 style="float: right;margin-top:-1px;margin-right: 10px">￥' + result[0].strategy_money + '</h4>')
+                var $describe = (' <p style="margin-left: 20px;margin-top: 20px">' + result[0].strategy_describe + '</p>')
+                $(".Ftitle").text(result[0].strategy_date + result[0].strategy_title);
+                $(".Ftitle").after($money);
+                $(".Ftitle").parent().after($describe);
+
+                // 获取经纬度
+                var lng_lat;
+                $.ajax({
+                    type: "get",
+                    url : "http://restapi.amap.com/v3/geocode/geo?key=389880a06e3f893ea46036f030c94700&s=rsv3&city=35&address="+address,
+                    type: "get",
+                    dataType:'JSON',
+                    success :function(data){
+                        console.log(data);
+                        lng_lat = data.geocodes[0].location;
+                        // var lat = data.result.location.lat;
+                    }
+                });
+                console.log(lng_lat);
+                // 地图
+                var map = new AMap.Map('container', {
+                    resizeEnable: true,
+                    center: lng_lat,
+                    zoom: 12
+                });
+                AMap.service('AMap.Weather', function() {
+                    var weather = new AMap.Weather();
+                    //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
+                    weather.getLive(address, function(err, data) {
+                        if (!err) {
+                            var str = [];
+                            str.push('<div style="color: #3366FF;">实时天气' + '</div>');
+                            str.push('<div>城市/区：' + data.city + '</div>');
+                            str.push('<div>天气：' + data.weather + '</div>');
+                            str.push('<div>温度：' + data.temperature + '℃</div>');
+                            str.push('<div>风向：' + data.windDirection + '</div>');
+                            str.push('<div>风力：' + data.windPower + ' 级</div>');
+                            str.push('<div>空气湿度：' + data.humidity + '</div>');
+                            str.push('<div>发布时间：' + data.reportTime + '</div>');
+                            var marker = new AMap.Marker({map: map, position: map.getCenter()});
+                            var infoWin = new AMap.InfoWindow({
+                                content: str.join(''),
+                                offset: new AMap.Pixel(0, -20)
+                            });
+                            infoWin.open(map, marker.getPosition());
+                            marker.on('mouseover', function() {
+                                infoWin.open(map, marker.getPosition());
+                            });
+                        }
+                    });
+                    //未来4天天气预报
+                    weather.getForecast(address, function(err, data) {
+                        if (err) {return;}
+                        var str = [];
+                        for (var i = 0,dayWeather; i < data.forecasts.length; i++) {
+                            dayWeather = data.forecasts[i];
+                            str.push(dayWeather.date+' <div class="weather">'+dayWeather.dayWeather+'</div> '+ dayWeather.nightTemp + '~' + dayWeather.dayTemp + '℃');
+                        }
+                        document.getElementById('tip').innerHTML = str.join('<br>');
+                    });
+                });
+            }
+        });
+
+        $.ajax({
+            url: "/ShowPlaceServlet",
+            type: "post",
+            dataType: "json",
+            data: {"strategy_id": id},
+            success: function (result) {
+                for (var i = 0; i < result.length; i++) {
+                    var $node = ('<li class="layui-timeline-item">\n' +
+                        '                            <i class="layui-icon layui-timeline-axis"></i>\n' +
+                        '                            <div class="layui-timeline-content layui-text">\n' +
+                        '                                <div class="layui-timeline-title">' + result[i].place_name + '</div>\n' +
+                        '                            </div>\n' +
+                        '                        </li>\n' +
+                        '                        <img src="' + imgs[i] + '" width="80%" style="margin-left: 20px" class="Fcenter">\n' +
+                        '                        <p style="margin-left: 20px;margin-top: 20px">' + result[i].place_description + '</p>')
+                    $(".layui-timeline").append($node);
+                }
+            }
+        })
+        $(".Fbtn-wish").click(function () {
+            if(user_id!=null) {
+                $.ajax({
+                    url:"/ShowwannerNumServlet",
+                    data:{"strategy_id":id},
+                    type:"post",
+                    dataType:"json",
+                    success:function (list) {
+                        var users_id;
+                        for(var i=0;i<list.length;i++){
+                            users_id=list[i].user_id;
+                        }
+                        if(users_id==user_id){
+                            layer.msg("想去已经成功呦！")
+                        }
+                        else{
+                            $.ajax({
+                                url: "/InsertWannerServlet",
+                                data: {"user_id": user_id, "strategy_id": id},
+                                type: "post",
+                                dataType: "json",
+                                success: function (ret) {
+                                    $.ajax({
+                                        url:"/ShowwannerNumServlet",
+                                        data:{"strategy_id":id},
+                                        type:"post",
+                                        dataType:"json",
+                                        success:function (list) {
+                                            var num=list.length;
+                                            $(".Fnumber").text(num);
+                                        }
+                                    })
+                                }
+                            })
+                        }
+                    }
+                })
+
+            }
+            else
+            {
+                layer.msg("请您登录后再进行评论！");
+            }
+        })
+        $.ajax({
+            url:"/ShowwannerNumServlet",
+            data:{"strategy_id":id},
+            type:"post",
+            dataType:"json",
+            success:function (list) {
+                var num=list.length;
+                $(".Fnumber").text(num);
+            }
+        })
+
+
+
+        //群聊
+        $(".groupchat_join").click(function () {
+            if(user_id!=null){
+                $(".groupchat_show").show();
+                $(".groupchat_header").text(strategy_name);
+                $.ajax({
+                    type: "post",
+                    url: "/ShowMessageServlet",
+                    data: {"strategy_id": id},
+                    dataType: "json",
+                    success: function (result) {
+                        console.log(result);
+                        if (result!=null){
+                            $(".groupchat_showmessages").empty();
+                            for(var i = 0; i < result.length; i++){
+                                if(parseInt(result[i].user_id) == user_id){
+                                    $(".groupchat_showmessages").append('<div style=" position: relative;"><p>' + result[i].messagetime
+                                        + '</p><div style="background-color: #00F7DE; border-radius: 5px; margin-left: 10px;margin-top: -10px;">'+
+                                        '<p style="position: relative; left: 20px">'+ result[i].message +'</p>'+
+                                        '</div></div>');
+                                }else {
+                                    $(".groupchat_showmessages").append('<div style=" position: relative;"><p>' + result[i].messagetime
+                                        + '</p><div style="background-color: #f0f0f0; border-radius: 5px; margin-left: 10px;margin-top: -10px;"><span>' +
+                                        result[i].user_id +': '+ '</span>'+ '<p style="position: relative; top: -10px; left: 20px">'+ result[i].message +'</p>'+
+                                        '</div></div>');
+                                }
+                            }
+                            var scrollHeight = $(".groupchat_showmessages").prop("scrollHeight");
+                            $(".groupchat_showmessages").scrollTop(scrollHeight, 400);
+                        }
+                    }
+                });
+            }else{
+                layer.msg("请登录后加群哦！")
+            }
+
+            });
+
+        $(".groupchat_show").mouseleave(function () {
+            $(".groupchat_show").hide();
+        });
+
+        $(".groupchat_sendmessage").click(function () {
+            var messages = $(".groupchat_input").val();
+            var group_id = id;
+            var user_id1 = user_id;
+            var messagetime = new Date().toLocaleTimeString();
+            $.ajax({
+                type: "post",
+                url: "/InsertMessageServlet",
+                data: {
+                    "strategy_id": group_id,
+                    "user_id": user_id1,
+                    "messages": messages,
+                },
+                dataType: "json",
+                success: function (result) {
+                    if(result == "1"){
+                        $(".groupchat_showmessages").append('<div style=" position: relative;"><p>' + messagetime
+                            + '</p><div style="background-color: #00F7DE; border-radius: 5px; margin-left: 10px;margin-top: -10px;">'+
+                            '<p style="position: relative; left: 20px">'+ messages +'</p>'+
+                            '</div></div>');
+                        var scrollHeight = $(".groupchat_showmessages").prop("scrollHeight");
+                        $(".groupchat_showmessages").scrollTop(scrollHeight, 400);
+                        $(".groupchat_input").val("");
+                    }
+                }
+            });
+        });
+
+
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>微行</title>
+    <title>微行网</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -10,24 +10,174 @@
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/liebiao.css">
     <script src="js/jquery-3.3.1.js"></script>
-
-
+    <script>
+        $(function () {
+            $.ajax({
+                url:"/ShowScore",
+                type:"post",
+                dataType:"json",
+                success:function (result) {
+                    $(".describe1:eq(0)").text(result[0].strategy_describe)
+                    $(".describe1:eq(0)").parent().prev().children().attr("src",result[0].strategy_firstimg)
+                    $(".describe1:eq(0)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[0].strategy_id+'')
+                    $(".h3_title:eq(0)").text("【热门攻略】"+result[0].strategy_title)
+                    $(".describe1:eq(1)").text(result[1].strategy_describe)
+                    $(".describe1:eq(1)").parent().prev().children().attr("src",result[1].strategy_firstimg)
+                    $(".describe1:eq(1)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[1].strategy_id+'')
+                    $(".h3_title:eq(1)").text("【热门攻略】"+result[1].strategy_title)
+                    $(".describe1:eq(2)").text(result[2].strategy_describe)
+                    $(".describe1:eq(2)").parent().prev().children().attr("src",result[2].strategy_firstimg)
+                    $(".describe1:eq(2)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[2].strategy_id+'')
+                    $(".h3_title:eq(2)").text("【热门攻略】"+result[2].strategy_title)
+                    $(".describe1:eq(3)").text(result[3].strategy_describe)
+                    $(".describe1:eq(3)").parent().prev().children().attr("src",result[3].strategy_firstimg)
+                    $(".describe1:eq(3)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[3].strategy_id+'')
+                    $(".h3_title:eq(3)").text("【热门攻略】"+result[3].strategy_title)
+                }
+            });
+            $.ajax({
+                url:"/ShowScore",
+                type:"post",
+                dataType:"json",
+                success:function (result) {
+                    $(".describe1:eq(4)").text(result[0].strategy_describe)
+                    $(".describe1:eq(4)").parent().prev().children().attr("src",result[0].strategy_firstimg)
+                    $(".describe1:eq(4)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[0].strategy_id+'')
+                    $(".h3_title:eq(4)").text("【热门地点】"+result[0].strategy_title)
+                    $(".describe1:eq(5)").text(result[1].strategy_describe)
+                    $(".describe1:eq(5)").parent().prev().children().attr("src",result[1].strategy_firstimg)
+                    $(".describe1:eq(5)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[1].strategy_id+'')
+                    $(".h3_title:eq(5)").text("【热门地点】"+result[1].strategy_title)
+                    $(".describe1:eq(6)").text(result[2].strategy_describe)
+                    $(".describe1:eq(6)").parent().prev().children().attr("src",result[2].strategy_firstimg)
+                    $(".describe1:eq(6)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[2].strategy_id+'')
+                    $(".h3_title:eq(6)").text("【热门地点】"+result[2].strategy_title)
+                    $(".describe1:eq(7)").text(result[3].strategy_describe)
+                    $(".describe1:eq(7)").parent().prev().children().attr("src",result[3].strategy_firstimg)
+                    $(".describe1:eq(7)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[3].strategy_id+'')
+                    $(".h3_title:eq(7)").text("【热门地点】"+result[3].strategy_title)
+                    $(".describe1:eq(8)").text(result[4].strategy_describe)
+                    $(".describe1:eq(8)").parent().prev().children().attr("src",result[4].strategy_firstimg)
+                    $(".describe1:eq(8)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[4].strategy_id+'')
+                    $(".h3_title:eq(8)").text("【热门地点】"+result[4].strategy_title)
+                    $(".describe1:eq(9)").text(result[5].strategy_describe)
+                    $(".describe1:eq(9)").parent().prev().children().attr("src",result[5].strategy_firstimg)
+                    $(".describe1:eq(9)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[5].strategy_id+'')
+                    $(".h3_title:eq(9)").text("【热门地点】"+result[5].strategy_title)
+                }
+            });
+            $.ajax({
+                url:"/ShowPoorServlet",
+                type:"post",
+                dataType:"json",
+                success:function (result) {
+                    $(".describe1:eq(10)").text(result[0].strategy_describe)
+                    $(".describe1:eq(10)").parent().prev().children().attr("src",result[0].strategy_firstimg)
+                    $(".describe1:eq(10)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[0].strategy_id+'')
+                    $(".h3_title:eq(10)").text("【穷游出行】"+result[0].strategy_title)
+                    $(".describe1:eq(11)").text(result[1].strategy_describe)
+                    $(".describe1:eq(11)").parent().prev().children().attr("src",result[1].strategy_firstimg)
+                    $(".describe1:eq(11)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[1].strategy_id+'')
+                    $(".h3_title:eq(11)").text("【穷游出行】"+result[1].strategy_title)
+                    $(".describe1:eq(12)").text(result[2].strategy_describe)
+                    $(".describe1:eq(12)").parent().prev().children().attr("src",result[2].strategy_firstimg)
+                    $(".describe1:eq(12)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[2].strategy_id+'')
+                    $(".h3_title:eq(12)").text("【穷游出行】"+result[2].strategy_title)
+                    $(".describe1:eq(13)").text(result[3].strategy_describe)
+                    $(".describe1:eq(13)").parent().prev().children().attr("src",result[3].strategy_firstimg)
+                    $(".describe1:eq(13)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[3].strategy_id+'')
+                    $(".h3_title:eq(13)").text("【穷游出行】"+result[3].strategy_title)
+                    $(".describe1:eq(14)").text(result[4].strategy_describe)
+                    $(".describe1:eq(14)").parent().prev().children().attr("src",result[4].strategy_firstimg)
+                    $(".describe1:eq(14)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[4].strategy_id+'')
+                    $(".h3_title:eq(14)").text("【穷游出行】"+result[4].strategy_title)
+                    $(".describe1:eq(15)").text(result[5].strategy_describe)
+                    $(".describe1:eq(15)").parent().prev().children().attr("src",result[5].strategy_firstimg)
+                    $(".describe1:eq(15)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[5].strategy_id+'')
+                    $(".h3_title:eq(15)").text("【穷游出行】"+result[5].strategy_title)
+                }
+            });
+            $.ajax({
+                url:"/ShowShort",
+                type:"post",
+                dataType:"json",
+                success:function (result) {
+                    $(".describe1:eq(16)").text(result[0].strategy_describe)
+                    $(".describe1:eq(16)").parent().prev().children().attr("src",result[0].strategy_firstimg)
+                    $(".describe1:eq(16)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[0].strategy_id+'')
+                    $(".h3_title:eq(16)").text("【短假出游】"+result[0].strategy_title)
+                    $(".describe1:eq(17)").text(result[1].strategy_describe)
+                    $(".describe1:eq(17)").parent().prev().children().attr("src",result[1].strategy_firstimg)
+                    $(".describe1:eq(17)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[1].strategy_id+'')
+                    $(".h3_title:eq(17)").text("【短假出游】"+result[1].strategy_title)
+                    $(".describe1:eq(18)").text(result[2].strategy_describe)
+                    $(".describe1:eq(18)").parent().prev().children().attr("src",result[2].strategy_firstimg)
+                    $(".describe1:eq(18)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[2].strategy_id+'')
+                    $(".h3_title:eq(18)").text("【短假出游】"+result[2].strategy_title)
+                    $(".describe1:eq(19)").text(result[3].strategy_describe)
+                    $(".describe1:eq(19)").parent().prev().children().attr("src",result[3].strategy_firstimg)
+                    $(".describe1:eq(19)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[3].strategy_id+'')
+                    $(".h3_title:eq(19)").text("【短假出游】"+result[3].strategy_title)
+                    $(".describe1:eq(20)").text(result[4].strategy_describe)
+                    $(".describe1:eq(20)").parent().prev().children().attr("src",result[4].strategy_firstimg)
+                    $(".describe1:eq(20)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[4].strategy_id+'')
+                    $(".h3_title:eq(20)").text("【短假出游】"+result[4].strategy_title)
+                    $(".describe1:eq(21)").text(result[5].strategy_describe)
+                    $(".describe1:eq(21)").parent().prev().children().attr("src",result[5].strategy_firstimg)
+                    $(".describe1:eq(21)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[5].strategy_id+'')
+                    $(".h3_title:eq(21)").text("【短假出游】"+result[5].strategy_title)
+                }
+            });
+            $.ajax({
+                url:"/ShowBestSeason",
+                type:"post",
+                dataType:"json",
+                success:function (result) {
+                    $(".describe1:eq(22)").text(result[0].strategy_describe)
+                    $(".describe1:eq(22)").parent().prev().children().attr("src",result[0].strategy_firstimg)
+                    $(".describe1:eq(22)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[0].strategy_id+'')
+                    $(".h3_title:eq(22)").text("【当季旅行】"+result[0].strategy_title)
+                    $(".describe1:eq(23)").text(result[1].strategy_describe)
+                    $(".describe1:eq(23)").parent().prev().children().attr("src",result[1].strategy_firstimg)
+                    $(".describe1:eq(23)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[1].strategy_id+'')
+                    $(".h3_title:eq(23)").text("【当季旅行】"+result[1].strategy_title)
+                    $(".describe1:eq(24)").text(result[2].strategy_describe)
+                    $(".describe1:eq(24)").parent().prev().children().attr("src",result[2].strategy_firstimg)
+                    $(".describe1:eq(24)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[2].strategy_id+'')
+                    $(".h3_title:eq(24)").text("【当季旅行】"+result[2].strategy_title)
+                    $(".describe1:eq(25)").text(result[3].strategy_describe)
+                    $(".describe1:eq(25)").parent().prev().children().attr("src",result[3].strategy_firstimg)
+                    $(".describe1:eq(25)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[3].strategy_id+'')
+                    $(".h3_title:eq(25)").text("【当季旅行】"+result[3].strategy_title)
+                    $(".describe1:eq(26)").text(result[4].strategy_describe)
+                    $(".describe1:eq(26)").parent().prev().children().attr("src",result[4].strategy_firstimg)
+                    $(".describe1:eq(26)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[4].strategy_id+'')
+                    $(".h3_title:eq(26)").text("【当季旅行】"+result[4].strategy_title)
+                    $(".describe1:eq(27)").text(result[5].strategy_describe)
+                    $(".describe1:eq(27)").parent().prev().children().attr("src",result[5].strategy_firstimg)
+                    $(".describe1:eq(27)").parent().parent().parent().attr("href",'show.html?strategy_id='+result[5].strategy_id+'')
+                    $(".h3_title:eq(27)").text("【当季旅行】"+result[5].strategy_title)
+                }
+            });
+        })
+    </script>
 </head>
 <body>
+
 <header class="navbar-fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="logo">
-                    <a href="http://www.wanho.net">
+                    <a href="www.zhanghuaquan.top">
                         <img src="images/logo.jpg" style="width: 52px; height: 52px">
                     </a>
                 </div>
                 <div>
-                    <div class="site-name"><a href="http://www.wanho.net">微行网</a></div>
+                    <div class="site-name"><a href="www.zhanghuaquan.top">微行网</a></div>
                     <div class="site_slogan">
                         做最用心的旅游攻略
-                        <a href="http://www.wanho.net">WeiXing</a>
+                        <a href="www.zhanghuaquan.top">WeiXing</a>
                     </div>
                 </div>
             </div>
@@ -48,11 +198,11 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="active"><a href="weixing.html">首页</a></li>
-                                <li><a href="#">关于</a></li>
-                                <li><a href="#">服务</a></li>
-                                <li><a href="#" style="color: red">登录</a></li>
-                                <li><a href="#" style="color: red">注册</a></li>
-                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#footer">关于</a></li>
+                                <li><a href="#footer">服务</a></li>
+                                <li><a href="login.html" style="color: red">登录</a></li>
+                                <li><a href="login.html" style="color: red">注册</a></li>
+                                <li><a href="userInfo/UserInfoShow.html">个人中心</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,7 +211,8 @@
         </div>
     </div>
 </header>
-<section class="scroll_header">
+<a name="top"></a>
+<section class="scroll_header" >
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -118,8 +269,9 @@
         </a>
     </div>
 </section>
-<section class="index" style="padding: 0">
-    <nav class="bg-color-white sticky-nav" style="background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 1529px;">
+
+<section class="index" style="padding: 0;z-index: 100">
+    <nav class="bg-color-white sticky-nav" style="background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 100%;">
         <div class="container">
             <div class="col3">
                 <a href="http://zanadu.cn">
@@ -128,112 +280,112 @@
 
                 <ul class="main-nav no-bullets left">
                     <li class="menu-destination has-sub-menu js-menu-destination" data-submenu-id="menu_destination">
-                        <a href="" class="main_show_address">目的地</a>
+                        <a href="destintination.html" class="main_show_address">目的地</a>
 
                         <div class="sub-menu" id="menu_destination">
                             <div class="destination-list-item">
                                 <div class="title">热门目的地</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/274.html">日本</a>
-                                    <a class="name" href="/destination/977.html">夏威夷</a>
-                                    <a class="name" href="/destination/348.html">泰国</a>
-                                    <a class="name" href="/destination/306.html">马尔代夫</a>
-                                    <a class="name" href="/destination/1374.html">挪威</a>
-                                    <a class="name" href="/destination/14-1.html">南极与北极</a>
-                                    <a class="name" href="/destination/192.html">云南</a>
-                                    <a class="name" href="/destination/208.html">浙江</a>
-                                    <a class="name" href="/destination/183.html">海南</a>
+                                    <a class="name" href="destintination.html">日本</a>
+                                    <a class="name" href="#">夏威夷</a>
+                                    <a class="name" href="#">泰国</a>
+                                    <a class="name" href="">马尔代夫</a>
+                                    <a class="name" href="destintination.html">挪威</a>
+                                    <a class="name" href="destintination.html">南极与北极</a>
+                                    <a class="name" href="destintination.html">云南</a>
+                                    <a class="name" href="destintination.html">浙江</a>
+                                    <a class="name" href="destintination.html">海南</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东亚 </div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/344.html">韩国</a>
-                                    <a class="name" href="/destination/274.html">日本</a>
+                                    <a class="name" href="destintination.html">韩国</a>
+                                    <a class="name" href="destintination.html">日本</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">拉丁美洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/92.html">巴西</a>
-                                    <a class="name" href="/destination/1737.html">古巴</a>
+                                    <a class="name" href="destintination.html">巴西</a>
+                                    <a class="name" href="destintination.html">古巴</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">中东与北非</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/400.html">阿联酋</a>
-                                    <a class="name" href="/destination/863.html">卡塔尔</a>
+                                    <a class="name" href="destintination.html">阿联酋</a>
+                                    <a class="name" href="destintination.html">卡塔尔</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">西欧与地中海</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/481.html">德国</a>
-                                    <a class="name" href="/destination/459.html">法国</a>
-                                    <a class="name" href="/destination/619.html">土耳其</a>
-                                    <a class="name" href="/destination/628.html">英国</a>
+                                    <a class="name" href="destintination.html">德国</a>
+                                    <a class="name" href="destintination.html>法国</a>
+                                    <a class="name" href="destintination.html">土耳其</a>
+                                    <a class="name" href="destintination.html">英国</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">大洋洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/118.html">澳大利亚</a>
-                                    <a class="name" href="/destination/149.html">新西兰</a>
+                                    <a class="name" href="destintination.html">澳大利亚</a>
+                                    <a class="name" href="destintination.html">新西兰</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">北欧</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/1374.html">挪威</a>
-                                    <a class="name" href="/destination/1381.html">瑞典</a>
+                                    <a class="name" href="destintination.html">挪威</a>
+                                    <a class="name" href="destintination.html">瑞典</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">南部非洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/1482.html">纳米比亚</a>
-                                    <a class="name" href="/destination/28.html">南非</a>
+                                    <a class="name" href="destintination.html">纳米比亚</a>
+                                    <a class="name" href="destintination.html">南非</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">东南亚与南亚</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/306.html">马尔代夫</a>
-                                    <a class="name" href="/destination/289.html">马来西亚</a>
-                                    <a class="name" href="/destination/348.html">泰国</a>
-                                    <a class="name" href="/destination/335.html">新加坡</a>
+                                    <a class="name" href="destintination.html">马尔代夫</a>
+                                    <a class="name" href="destintination.html">马来西亚</a>
+                                    <a class="name" href="destintination.html">泰国</a>
+                                    <a class="name" href="destintination.html">新加坡</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东欧与俄罗斯</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/546.html">俄罗斯</a>
-                                    <a class="name" href="/destination/455.html">捷克</a>
+                                    <a class="name" href="destintination.html">俄罗斯</a>
+                                    <a class="name" href="destintination.html">捷克</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">北美</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/48.html">加拿大</a>
-                                    <a class="name" href="/destination/56.html">美国</a>
+                                    <a class="name" href="destintination.html">加拿大</a>
+                                    <a class="name" href="destintination.html">美国</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东非</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/808.html">肯尼亚</a>
-                                    <a class="name" href="/destination/14.html">毛里求斯</a>
+                                    <a class="name" href="destintination.html">肯尼亚</a>
+                                    <a class="name" href="destintination.html">毛里求斯</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">南极与北极</div>
                                 <div class="destination-list">
-                                    <a class="name" href="/destination/1634.html">朗伊尔城</a>
-                                    <a class="name" href="/destination/1328.html">南极洲</a>
+                                    <a class="name" href="destintination.html">朗伊尔城</a>
+                                    <a class="name" href="destintination.html">南极洲</a>
                                 </div>
                             </div>
                         </div>
@@ -247,33 +399,33 @@
                                 <div class="title margin-bottom-20 padding-top-20 margin-left-20">预订行程</div>
                                 <ul class="no-bullets margin-left-20 text-center">
                                     <li>
-                                        <a href="/signaturetrip.html" class="sig-trip">
-                                            <div>微行旅程</div>
+                                        <a href="liebiao.html" class="sig-trip">
+                                            <div>全部攻略</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/bundle.html" class="bundle">
-                                            <div>海外自由行</div>
+                                        <a href="Hothtml.html" class="bundle">
+                                            <div>最热攻略</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/smallluxurygroup.html" class="small-luxury-group">
-                                            <div>轻奢小团</div>
+                                        <a href="duanjia.html" class="small-luxury-group">
+                                            <div>热门景点</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/cruise.html" class="cruise">
-                                            <div>大航海时代</div>
+                                        <a href="qiongyou.html" class="cruise">
+                                            <div>穷游出行</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/villa.html" class="villa">
-                                            <div>国内短假</div>
+                                        <a href="duanjia.html" class="mini">
+                                            <div>短假出游</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/hotel.html" class="hotel">
-                                            <div>私人定制</div>
+                                        <a href="dangji.html" class="bespoke">
+                                            <div>当季旅行</div>
                                         </a>
                                     </li>
                                 </ul>
@@ -291,8 +443,8 @@
                     </li>
                 </ul>
                 <div class="left guest">
-                    <form class="js-search-form left search-form relative" action="/search.html" method="GET">
-                        <input class="input-text left js-nav-search-keyword ac_input" id="SearchForm_keyword_nav" autocomplete="off" placeholder="目的地 / 游玩天数／花费" type="text" name="SearchForm[keyword]">
+                    <form class="js-search-form left search-form relative" action="liebiao1.html" method="GET">
+                        <input class="input-text left js-nav-search-keyword ac_input" id="SearchForm_keyword_nav" autocomplete="off" placeholder="游玩天数" type="text" name="days">
                         <span class="glyphicon glyphicon-search" style="height: 33px; width: 33px; font-size: 20px; margin-left: -25px; top: -8px; line-height: 33px">
                             <input class="input-submit left button" value="" type="submit">
                         </span>
@@ -306,11 +458,12 @@
         </div>
     </nav>
 </section>
-<div class="center" style="position: relative ;top:-100px">
+
+<div class="center" style="position: relative; top: -60px">
     <div class="center_head">
         <h2>最热攻略 Hottest strategy </h2>
         <div class="center_center">
-            <a href="#">
+            <a href="show.html">
                 <div class="center_center_1">
                     <div class="image1">
                         <div class="biaoqian"> <div class="biaoqian3">FUN暑假</div></div>
@@ -323,7 +476,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#">
+            <a href="season.html">
                 <div class="center_center_2">
                     <div class="image1">
                         <div class="biaoqian"><div class="biaoqian3">FUN暑假</div></div>
@@ -335,7 +488,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#">
+            <a href="show.html">
                 <div class="center_center_3">
                     <div class="image1">
                         <div class="biaoqian"><div class="biaoqian3">FUN暑假</div></div>
@@ -350,19 +503,19 @@
             </a>
         </div>
         <div class="center_center">
-            <a href="#">
+            <a href="show.html?strategy_id=2">
                 <div class="center_center1_1">
                     <div class="image2"><img src="images/4.jpg"></div>
                     <div class="describe_1">
-                        <div class="describe2">【轻奢小团】2018国庆澳大利亚10天7晚世界中心之旅——探秘原野星光下的乌鲁鲁，细意品味奢华万般美景</div>
-                        <h3 class="h3_title_1">【轻奢小团】2018国庆澳大利亚10天7晚世界中心之旅——探秘原野星光下的乌鲁鲁，细意品味奢华万般美景</h3>
+                        <div class="describe2">【热门攻略】2018国庆澳大利亚10天7晚世界中心之旅——探秘原野星光下的乌鲁鲁，细意品味奢华万般美景</div>
+                        <h3 class="h3_title_1">【热门攻略】2018国庆澳大利亚10天7晚世界中心之旅——探秘原野星光下的乌鲁鲁，细意品味奢华万般美景</h3>
                     </div>
                 </div>
             </a>
             <div class="center_center_2">
                 <a href="#">
                     <div class="center_center_1">
-                        <div class="image2"><img src="images/2.jpg"></div>
+                        <div class="image1"><img src="images/2.jpg"></div>
                         <div class="describe">
                             <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                             <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -373,20 +526,21 @@
         </div>
     </div>
 </div>
+
 <div class="middle" style="position: relative ;top:-100px">
     <div class="center_head">
         <h2 class="h2_1">热门景点 Hot Spots </h2>
     </div>
     <div class="middle_right">
         <div class="tubiao"><img src="images/jiahao1.png"></div>
-        <a href="#" class="a_1">
+        <a href="duanjia.html" class="a_1">
             更多热门景点
         </a>
     </div>
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy1.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -395,7 +549,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy2.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -404,7 +558,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy3.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -415,7 +569,7 @@
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy4.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -424,7 +578,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy5.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -433,7 +587,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy6.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -446,14 +600,14 @@
     </div>
     <div class="middle_right">
         <div class="tubiao"><img src="images/jiahao1.png"></div>
-        <a href="#" class="a_1">
+        <a href="qiongyou.html" class="a_1">
             更多穷游出行
         </a>
     </div>
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy7.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -462,7 +616,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy8.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -471,7 +625,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy9.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -482,7 +636,7 @@
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy10.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -491,7 +645,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy11.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -500,7 +654,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy12.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -513,14 +667,14 @@
     </div>
     <div class="middle_right">
         <div class="tubiao"><img src="images/jiahao1.png"></div>
-        <a href="#" class="a_1">
+        <a href="duanjia.html" class="a_1">
             更多短假旅游
         </a>
     </div>
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy13.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -529,7 +683,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy14.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -538,7 +692,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy15.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -549,7 +703,7 @@
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy16.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -558,7 +712,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy17.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -567,7 +721,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy18.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -580,14 +734,14 @@
     </div>
     <div class="middle_right">
         <div class="tubiao"><img src="images/jiahao1.png"></div>
-        <a href="#" class="a_1">
+        <a href="dangji.html" class="a_1">
             更多当季旅行
         </a>
     </div>
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy19.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -596,7 +750,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy20.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -605,7 +759,7 @@
         </a>
         <a href="#">
             <div class="center_center_3">
-                <div class="image1"><img src="images/5.jpg"></div>
+                <div class="image1"><img src="images/cy21.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -616,7 +770,7 @@
     <div class="center_center1">
         <a href="#">
             <div class="center_center_1">
-                <div class="image1"><img src="images/2.jpg"></div>
+                <div class="image1"><img src="images/cy22.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -625,7 +779,7 @@
         </a>
         <a href="#">
             <div class="center_center_2">
-                <div class="image1"><img src="images/3.jpg"></div>
+                <div class="image1"><img src="images/cy23.jpg"></div>
                 <div class="describe">
                     <div class="describe1">10月，当北半球的秋色正浓，远在南半球的南非却迎来紫色的春天，漫天盛放的紫薇花，赫曼纽斯响起的观鲸号角，这一切，都吸引着我们狂奔向地球的另一端！</div>
                     <h3 class="h3_title">【轻奢小团】2018国庆南非11天8晚花园大道观鲸之旅——彩虹之国，梦幻童趣</h3>
@@ -642,8 +796,9 @@
             </div>
         </a>
     </div>
+    <a href="#top"><div class="beijing_footer" style="margin-top:3290px"><div class="footer_1">返回顶部</div></div></a>
 </div>
-<div class="footer">
+<div class="footer" id="footer" style="width: 100%">
     <div class="footer_copyright">
         <div class="footer_copyright_inner">
             <p class="footer_copyright_nav">
@@ -731,6 +886,41 @@
 <script src="js/modernizr-3.6.0.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/header_footer.js"></script>
+<script src="js/weixing_ajax.js"></script>
 <script src="js/bootstrap.js"></script>
+
+
+<script>
+    $(function () {
+        $.ajax({
+            url:"/getSession",
+            type:"post",
+            data: {"sessionid":"sessionkey"},
+            dataType:"json",
+            success:function (ret) {
+                if(ret==null){
+                    setTimeout("javascript:window.location.href='login.html'",1000);
+                }else {
+                    $("#bs-example-navbar-collapse-1 ul li:eq(3)").text("您好" + ret[0].user_name);
+                    // $("#bs-example-navbar-collapse-1 ul li:eq(4) a").attr("href", "localhost:8080/weixing.html");
+                    $("#bs-example-navbar-collapse-1 ul li:eq(4) a").text("退出");
+                }
+            },error:function (a,b,c) {
+                alert(a.responseText);
+                alert(a.status);
+                alert(c);
+
+            }
+        });
+
+
+        $(".input-submit").click(function () {
+            var days=$("#SearchForm_keyword_nav").val();
+            if(days==null||days==undefined||days==""){
+                event.preventDefault();
+            }
+        })
+    })
+</script>
 </body>
 </html>

@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <title>微行网</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/liebiao.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="css/liebiao.css">
-
-
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:"/ShowAllPoorServlet",
+                dataType:"json",
+                type:"post",
+                success:function (result) {
+                    for(var i=0;i<result.length;i++){
+                        var $node=$(' <a href="#" >\n' +
+                            '            <div class="center_center_21 ">\n' +
+                            '                <div class="image1"><img src="'+ result[i].strategy_firstimg+'"></div>\n' +
+                            '                <div class="describe">\n' +
+                            '                    <div class="describe1">'+ result[i].strategy_describe+'</div>\n' +
+                            '                    <h3 class="h3_title">'+ result[i].strategy_title+'</h3>\n' +
+                            '                </div>\n' +
+                            '            </div>\n' +
+                            '        </a>')
+                        $(".zhanshi").append($node)
+                    }
+                }
+            })
+        })
+    </script>
 </head>
-<body>
+<body style="background-color: #e1ebf3">
+
 <header class="navbar-fixed-top">
     <div class="container">
         <div class="row">
@@ -60,6 +83,7 @@
         </div>
     </div>
 </header>
+<a name="top"></a>
 <section class="scroll_header">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -117,10 +141,9 @@
         </a>
     </div>
 </section>
-<a name="top"></a>
 
 <section class="index" style="padding: 0;z-index: 100">
-    <nav class="bg-color-white sticky-nav" style="background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 100%;">
+    <nav class="bg-color-white sticky-nav" style="background-color: #fff; margin: 0px; left: 0px; top: 0px;  width: 1529px;">
         <div class="container">
             <div class="col3">
                 <a href="http://zanadu.cn">
@@ -129,112 +152,112 @@
 
                 <ul class="main-nav no-bullets left">
                     <li class="menu-destination has-sub-menu js-menu-destination" data-submenu-id="menu_destination">
-                        <a href="destintination.html" class="main_show_address">目的地</a>
+                        <a href="" class="main_show_address">目的地</a>
 
                         <div class="sub-menu" id="menu_destination">
                             <div class="destination-list-item">
                                 <div class="title">热门目的地</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">日本</a>
-                                    <a class="name" href="#">夏威夷</a>
-                                    <a class="name" href="#">泰国</a>
-                                    <a class="name" href="">马尔代夫</a>
-                                    <a class="name" href="destintination.html">挪威</a>
-                                    <a class="name" href="destintination.html">南极与北极</a>
-                                    <a class="name" href="destintination.html">云南</a>
-                                    <a class="name" href="destintination.html">浙江</a>
-                                    <a class="name" href="destintination.html">海南</a>
+                                    <a class="name" href="/destination/274.html">日本</a>
+                                    <a class="name" href="/destination/977.html">夏威夷</a>
+                                    <a class="name" href="/destination/348.html">泰国</a>
+                                    <a class="name" href="/destination/306.html">马尔代夫</a>
+                                    <a class="name" href="/destination/1374.html">挪威</a>
+                                    <a class="name" href="/destination/14-1.html">南极与北极</a>
+                                    <a class="name" href="/destination/192.html">云南</a>
+                                    <a class="name" href="/destination/208.html">浙江</a>
+                                    <a class="name" href="/destination/183.html">海南</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东亚 </div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">韩国</a>
-                                    <a class="name" href="destintination.html">日本</a>
+                                    <a class="name" href="/destination/344.html">韩国</a>
+                                    <a class="name" href="/destination/274.html">日本</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">拉丁美洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">巴西</a>
-                                    <a class="name" href="destintination.html">古巴</a>
+                                    <a class="name" href="/destination/92.html">巴西</a>
+                                    <a class="name" href="/destination/1737.html">古巴</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">中东与北非</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">阿联酋</a>
-                                    <a class="name" href="destintination.html">卡塔尔</a>
+                                    <a class="name" href="/destination/400.html">阿联酋</a>
+                                    <a class="name" href="/destination/863.html">卡塔尔</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">西欧与地中海</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">德国</a>
-                                    <a class="name" href="destintination.html>法国</a>
-                                    <a class="name" href="destintination.html">土耳其</a>
-                                    <a class="name" href="destintination.html">英国</a>
+                                    <a class="name" href="/destination/481.html">德国</a>
+                                    <a class="name" href="/destination/459.html">法国</a>
+                                    <a class="name" href="/destination/619.html">土耳其</a>
+                                    <a class="name" href="/destination/628.html">英国</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">大洋洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">澳大利亚</a>
-                                    <a class="name" href="destintination.html">新西兰</a>
+                                    <a class="name" href="/destination/118.html">澳大利亚</a>
+                                    <a class="name" href="/destination/149.html">新西兰</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">北欧</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">挪威</a>
-                                    <a class="name" href="destintination.html">瑞典</a>
+                                    <a class="name" href="/destination/1374.html">挪威</a>
+                                    <a class="name" href="/destination/1381.html">瑞典</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">南部非洲</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">纳米比亚</a>
-                                    <a class="name" href="destintination.html">南非</a>
+                                    <a class="name" href="/destination/1482.html">纳米比亚</a>
+                                    <a class="name" href="/destination/28.html">南非</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">东南亚与南亚</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">马尔代夫</a>
-                                    <a class="name" href="destintination.html">马来西亚</a>
-                                    <a class="name" href="destintination.html">泰国</a>
-                                    <a class="name" href="destintination.html">新加坡</a>
+                                    <a class="name" href="/destination/306.html">马尔代夫</a>
+                                    <a class="name" href="/destination/289.html">马来西亚</a>
+                                    <a class="name" href="/destination/348.html">泰国</a>
+                                    <a class="name" href="/destination/335.html">新加坡</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东欧与俄罗斯</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">俄罗斯</a>
-                                    <a class="name" href="destintination.html">捷克</a>
+                                    <a class="name" href="/destination/546.html">俄罗斯</a>
+                                    <a class="name" href="/destination/455.html">捷克</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">北美</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">加拿大</a>
-                                    <a class="name" href="destintination.html">美国</a>
+                                    <a class="name" href="/destination/48.html">加拿大</a>
+                                    <a class="name" href="/destination/56.html">美国</a>
                                 </div>
                             </div>
                             <div class="destination-list-item">
                                 <div class="title">东非</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">肯尼亚</a>
-                                    <a class="name" href="destintination.html">毛里求斯</a>
+                                    <a class="name" href="/destination/808.html">肯尼亚</a>
+                                    <a class="name" href="/destination/14.html">毛里求斯</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="destination-list-item">
                                 <div class="title">南极与北极</div>
                                 <div class="destination-list">
-                                    <a class="name" href="destintination.html">朗伊尔城</a>
-                                    <a class="name" href="destintination.html">南极洲</a>
+                                    <a class="name" href="/destination/1634.html">朗伊尔城</a>
+                                    <a class="name" href="/destination/1328.html">南极洲</a>
                                 </div>
                             </div>
                         </div>
@@ -253,13 +276,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Hothtml.html" class="bundle">
-                                            <div>最热攻略</div>
+                                        <a href="liebiao.html" class="bundle">
+                                            <div>热门攻略</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="duanjia.html" class="small-luxury-group">
-                                            <div>热门景点</div>
+                                        <a href="/smallluxurygroup.html" class="small-luxury-group">
+                                            <div>热门地点</div>
                                         </a>
                                     </li>
                                     <li>
@@ -268,12 +291,12 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="duanjia.html" class="mini">
-                                            <div>短假出游</div>
+                                        <a href="duanjia.html" class="villa">
+                                            <div>短假旅游</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="dangji.html" class="bespoke">
+                                        <a href="dangji.html" class="hotel">
                                             <div>当季旅行</div>
                                         </a>
                                     </li>
@@ -292,8 +315,8 @@
                     </li>
                 </ul>
                 <div class="left guest">
-                    <form class="js-search-form left search-form relative" action="liebiao1.html" method="GET">
-                        <input class="input-text left js-nav-search-keyword ac_input" id="SearchForm_keyword_nav" autocomplete="off" placeholder="游玩天数" type="text" name="days">
+                    <form class="js-search-form left search-form relative" action="/search.html" method="GET">
+                        <input class="input-text left js-nav-search-keyword ac_input" id="SearchForm_keyword_nav" autocomplete="off" placeholder="目的地 / 游玩天数／花费" type="text" name="SearchForm[keyword]">
                         <span class="glyphicon glyphicon-search" style="height: 33px; width: 33px; font-size: 20px; margin-left: -25px; top: -8px; line-height: 33px">
                             <input class="input-submit left button" value="" type="submit">
                         </span>
@@ -308,34 +331,9 @@
     </nav>
 </section>
 
-<div id="beijing" style="top: -135px; position: relative;">
-    <a href="liebiao.html"><div class="gonglue">
-        <h2 class="h_one">最热攻略</h2>
-        <h2 class="h_two">为您提供最热攻略，让您的出行不再枯燥。</h2>
-    </div>
-    </a>
-    <a href="dangji.html"><div class="gonglue1">
-        <h2 class="h_one">热门景点</h2>
-        <h2 class="h_two">为您提供全国热门景点，让您的旅游不再迷茫。</h2>
-    </div>
-    </a>
-    <a href="qiongyou.html"><div class="gonglue2">
-        <h2 class="h_one">穷游出行</h2>
-        <h2 class="h_two">一个人的旅行，在路上遇见最真实的自己。</h2>
-    </div>
-    </a>
-    <a href="duanjia.html"><div class="gonglue3">
-        <h2 class="h_one">短假出游</h2>
-        <h2 class="h_two">出去旅行，不是去看风景，而是去寻回自己——最本真的自己。</h2>
-    </div>
-    </a>
-    <a href="dangji.html"><div class="gonglue4">
-        <h2 class="h_one">当季旅行</h2>
-        <h2 class="h_two">到海岸边嬉水，在古镇河道边漫步,带您领略不一样的夏天。</h2>
-    </div>
-    </a>
-    <a href="#top"><div class="beijing_footer"><div class="footer_1">返回顶部</div></div></a>
+<div class="zhanshi center-block" style="position: relative;width:1200px; display:inline-block !important; margin: -50px 170px; padding-bottom: 30px;padding-top: 30px">
 </div>
+<a href="#top"><div class="beijing_footer"><div class="footer_1">返回顶部</div></div></a>
 <div class="footer" id="#footer">
     <div class="footer_copyright">
         <div class="footer_copyright_inner">
@@ -421,13 +419,8 @@
     </div>
 </div>
 
-
-<script src="js/modernizr-3.6.0.min.js"></script>
-<script src="js/jquery-3.3.1.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/header_footer.js"></script>
 <script src="js/bootstrap.js"></script>
-
-
 </body>
 </html>

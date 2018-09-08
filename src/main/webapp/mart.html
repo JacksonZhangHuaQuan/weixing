@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>天气预报查询</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <style type="text/css">
+        #weather {
+            height: 180px;
+            background-color: #fff;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            right: 10px;
+            border-radius: 3px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+        }
+        .weather{
+            width: 60px;
+            padding-left: 8px;
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.9&key=bfb69f8058d314c0e566a07943c7bd75"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <!--<link rel="stylesheet" href="https://cache.amap.com/lbs/static/main.css" />-->
+    <!--<style>-->
+        <!--.amap-info-content {-->
+            <!--background: #fff;-->
+            <!--border: 1px solid #ccc;-->
+            <!--padding: 10px 18px 10px 10px;-->
+            <!--line-height: 1.4;-->
+            <!--overflow: auto;-->
+        <!--}-->
+
+        <!--.amap-info-outer {-->
+            <!--box-shadow: 0 3px 14px rgba(0,0,100,.6);-->
+            <!--background: #fff;-->
+            <!--border-radius: 2px;-->
+            <!--padding: 1px;-->
+            <!--text-align: left;-->
+            <!--border: 1px solid silver;-->
+        <!--}-->
+
+        <!--.css-table {-->
+            <!--display: table;-->
+            <!--width: 100%;-->
+        <!--}-->
+
+        <!--#map .info-window .css-cell {-->
+            <!--vertical-align: top;-->
+        <!--}-->
+
+
+        <!--.padding-right-10 {-->
+            <!--padding-right: 10px;-->
+        <!--}-->
+
+        <!--.css-cell {-->
+            <!--display: table-cell;-->
+        <!--}-->
+
+        <!--#map .info-window .main-img img {-->
+            <!--width: 90px;-->
+        <!--}-->
+
+        <!--.amap-container img {-->
+            <!--max-width: none!important;-->
+            <!--max-height: none!important;-->
+        <!--}-->
+
+        <!--.info-window a > img {-->
+            <!--border: none;-->
+        <!--}-->
+
+        <!--#map .info-window .css-cell {-->
+            <!--vertical-align: top;-->
+        <!--}-->
+
+        <!--.css-cell {-->
+            <!--display: table-cell;-->
+        <!--}-->
+
+        <!--.css-cell h3{-->
+            <!--font-size: 1.4em;-->
+            <!--font-weight: normal;-->
+            <!--line-height: 1.4em;-->
+        <!--}-->
+
+        <!--.color-gray {-->
+            <!--color: #999;-->
+        <!--}-->
+
+    <!--</style>-->
+
+    <!--<script type="text/javascript"-->
+            <!--src="https://webapi.amap.com/maps?v=1.4.9&key=bfb69f8058d314c0e566a07943c7bd75"></script>-->
+    <!--<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+    <!--<script src="https://cache.amap.com/lbs/static/es5.min.js"></script>-->
+</head>
+<body>
+<div style="margin: auto">
+    <!--<div id="container" style="width: 1000px; height: 460px; margin: auto">-->
+        <!--<div class="amap-info-content amap-info-outer">-->
+            <!--<div class="info-window css-table">-->
+                <!--<a href="https://zanadu.cn/hotelpackage/2921.html" target="_blank" class="main-img css-cell padding-right-10">-->
+                    <!--<img src="https://cdn-photos.zanadu.cn/resources/zanadu/bundle/292/key3_2921_bundle.jpg!320x240?v=1522640908">-->
+                <!--</a>-->
+                <!--<div class="css-cell">-->
+                    <!--<h3>象岛圣思雅树木度假酒店套餐</h3>-->
+                    <!--<small class="location color-gray">泰国,象岛</small>-->
+                    <!--<br>-->
+                    <!--<a href="https://zanadu.cn/hotelpackage/2921.html" class="view-hotel-link" target="_blank">-->
+                        <!--<small>查看精选酒店</small>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div style="width: 660px; height: 420px; margin: auto; position: relative">
+        <div id="container" style="width: 660px; height: 420px"></div>
+        <div id="tip" style="line-height: 24px"></div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [116.486409,39.921489],
+        zoom: 12
+    });
+    AMap.service('AMap.Weather', function() {
+        var weather = new AMap.Weather();
+        //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
+        weather.getLive('朝阳区', function(err, data) {
+            if (!err) {
+                var str = [];
+                str.push('<div style="color: #3366FF;">实时天气' + '</div>');
+                str.push('<div>城市/区：' + data.city + '</div>');
+                str.push('<div>天气：' + data.weather + '</div>');
+                str.push('<div>温度：' + data.temperature + '℃</div>');
+                str.push('<div>风向：' + data.windDirection + '</div>');
+                str.push('<div>风力：' + data.windPower + ' 级</div>');
+                str.push('<div>空气湿度：' + data.humidity + '</div>');
+                str.push('<div>发布时间：' + data.reportTime + '</div>');
+                var marker = new AMap.Marker({map: map, position: map.getCenter()});
+                var infoWin = new AMap.InfoWindow({
+                    content: str.join(''),
+                    offset: new AMap.Pixel(0, -20)
+                });
+                infoWin.open(map, marker.getPosition());
+                marker.on('mouseover', function() {
+                    infoWin.open(map, marker.getPosition());
+                });
+            }
+        });
+        //未来4天天气预报
+        weather.getForecast('朝阳区', function(err, data) {
+            if (err) {return;}
+            var str = [];
+            for (var i = 0,dayWeather; i < data.forecasts.length; i++) {
+                dayWeather = data.forecasts[i];
+                str.push(dayWeather.date+' <div class="weather">'+dayWeather.dayWeather+'</div> '+ dayWeather.nightTemp + '~' + dayWeather.dayTemp + '℃');
+            }
+            document.getElementById('tip').innerHTML = str.join('<br>');
+        });
+    });
+</script>
+<!--<script src="js/weixingmap.js"></script>-->
+</body>
+</html>

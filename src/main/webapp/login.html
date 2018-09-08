@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>微 行</title>
+    <link rel="stylesheet" href="js/layui1/css/layui.css">
+    <link rel="stylesheet" href="css/login1.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/layui1/layui.all.js"></script>
+    <script src="js/login1/login1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+</head>
+<body>
+<div class="cotn_principal">
+    <div id="headlogin">
+        <div id="headlogin1"></div>
+        <h1> 微&nbsp;&nbsp;行&nbsp;/wei xing</h1>
+
+        <div class="login_backhome">
+            <a href="weixing.html">
+                <img src="images/backto.png">
+            </a>
+        </div>
+    </div>
+    <div class="cont_centrar">
+        <div class="cont_login">
+            <div class="cont_info_log_sign_up">
+                <div class="col_md_login">
+                    <div class="cont_ba_opcitiy">
+                        <h2>LOGIN</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <button class="btn_login" onClick="cambiar_login()">登录</button>
+                    </div>
+                </div>
+                <div class="col_md_sign_up">
+                    <div class="cont_ba_opcitiy">
+                        <h2>SIGN UP</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont_back_info">
+                <div class="cont_img_back_grey"> <img src="images/login1/po.jpg" alt="" /> </div>
+            </div>
+            <div class="cont_forms" >
+                <div class="cont_img_back_"> <img src="images/login1/po.jpg" alt="" /> </div>
+                <div>
+                    <form id="form1" class="cont_form_login" action="" method="">
+                        <a href="#" onClick="ocultar_login_sign_up()" ><i>&#xE5C4;</i></a>
+                        <h2>LOGIN</h2>
+                        <input type="text" name="phone" placeholder="phone">
+                        <input type="password"name="password" placeholder="password">
+                        <input type="submit" class="btn_login" value="登录" style="text-align:center;font-size: 15px;font-weight: 900" >
+                        <!--<button class="btn_login" onClick="cambiar_login()">LOGIN</button>-->
+                    </form>
+                </div>
+                <div>
+                    <form id="form2" class="cont_form_sign_up" action="" method="">
+                        <a href="#" onClick="ocultar_login_sign_up()"><i>&#xE5C4;</i></a>
+                        <h2>SIGN UP</h2>
+                        <input type="text" name="phone" placeholder="phone">
+                        <input type="text" name="username"placeholder="username" >
+                        <input type="password" name="password2"placeholder="password">
+                        <input type="password" name="confirm" placeholder="confirm">
+                        <input type="submit" class="btn_sign_up"value="注册" style="text-align:center;font-size: 15px;font-weight: 900" >
+                        <!--<button  onClick="cambiar_sign_up()">SIGN UP</button>-->
+                    </form>
+                </div>
+
+                <div class="check">
+                    <form  id="form3" action="" method="">
+                        <span style="font-size: 10px;text-align: left">请输入验证码：</span>
+                        <input type="text" name="code" style="width: 80px;"/> <img id="imgObj" alt="验证码" src="/getCode">
+                        <a href="#" onclick="changeImg()"  style="font-size: 10px;">换一张</a><br/>
+                        <!--<input type="submit" value="提交"/>-->
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

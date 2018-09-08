@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 引入jquery-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+address:<input type="text" name="address" id="address" style="width:30%">
+
+
+point:<input type="text" name="point" id="point" style="width:30%" readonly>
+<button type="button" id="open">getPoint</button>
+
+<wb:share-button appkey="3827231191" addition="number" type="button"></wb:share-button>
+
+<!--3.核心方法-->
+<script>
+    $(function () {
+        document.getElementById('open').onclick = function () {
+            alert("hello")
+            var address = "北京"; // $("#address").val();
+            if(address!=""){
+                $.ajax({
+                    type: "get",
+                    url : "http://restapi.amap.com/v3/geocode/geo?key=389880a06e3f893ea46036f030c94700&s=rsv3&city=35&address="+address,
+                    type: "get",
+                    dataType:'JSON',
+                    success :function(data){
+                         console.log(data);
+                        var lng_lat = data.geocodes[0].location;
+                        // var lat = data.result.location.lat;
+                        $("#point").val(lng_lat);
+                    }
+                });
+            }else{
+                alert("address is not null!");
+            }
+        }
+    });
+
+    // http://restapi.amap.com/v3/geocode/geo?key=bfb69f8058d314c0e566a07943c7bd75&s=rsv3&city=35&address=福建省霞浦县水门畲族乡
+
+</script>
+</body>
+</html>
