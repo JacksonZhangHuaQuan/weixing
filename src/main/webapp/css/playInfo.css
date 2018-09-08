@@ -1,0 +1,94 @@
+#play{
+    background-color: #f0f3ef;
+    margin: auto;
+    overflow: auto;
+}
+
+.person_strategy{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.oneStrategy{
+    height: 100px;
+    margin: 20px auto;
+    width: 700px;
+    margin: 20px auto;
+    background-color: rgba(234,246,255,0.89);
+}
+.strategy_info{
+    height: 100px;
+    width: 70%;
+    float: left;
+
+}
+.strategy_info_left{
+    width: 70%;
+    float: left;
+}
+.strategy_info_left h2{
+    text-align: center;
+}
+.strategy_info span{
+    display: inline-block;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.strategy_info_img{
+    width: 30%;
+    float: right;
+}
+#strategy_info_img{
+    height: 80px;
+    width: 120px;
+    padding: 10px;
+}
+.strategy_option{
+    height: 100px;
+    width: 30%;
+    background-color: #b2dba1;
+    float: right;
+}
+.strategy_option h3{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: rgba(30,159,255,0.89);
+    font-weight: bold;
+}
+.strategy_status_no{
+    color: rgba(255,87,34,0.89);
+}
+.strategy_info_but{
+    height: 100%;
+    text-align: center;
+}
+.option{
+    text-align: center;
+    background-color: #dddddd;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 9%;
+    width: 50px;
+    margin-top: 10px;
+}
+.edit{
+background-color: rgba(255,184,0,0.89);
+}
+.show{
+    background-color: rgba(30,159,255,0.89);
+}
+.delete{
+    background-color: rgba(255,87,34,0.89);
+}
+/*.strategy_info_but{*/
+    /*font-weight: bold;*/
+/*}*/
+/*.strategy_info_but a{*/
+/*color: #f0f3ef;*/
+/*}*/

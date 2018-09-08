@@ -1,0 +1,455 @@
+
+/*whereInfo*/
+#Where{
+    font-size: 23px;
+    float: left;
+    margin-top: -40px;
+    line-height: 10px;
+    font-style: inherit;
+
+}
+#WhereInfo{
+    width: 730px;
+    height: 200px;
+    background-image: url("../images/users/like_1.jpg");
+    /*position: relative;*/
+    /*top: 10px;*/
+    margin-top: 90px;
+    /*background-color: #fff;*/
+}
+.choose{
+    text-align: center;
+    position: relative;
+    top: 90px;
+    left: 270px;
+    color: #999;
+}
+
+
+/*shareInfo*/
+#share{
+    font-size: 23px;
+    float: left;
+    margin-top: -40px;
+    line-height: 10px;
+    font-style: inherit;
+}
+#shareInfo{
+    width: 730px;
+    height: 200px;
+    background-image: url("../images/users/Share.jpg");
+    /*position: relative;*/
+    /*top: 10px;*/
+    margin-top: 90px;
+    /*background-color: #fff;*/
+
+
+}
+.choose{
+    text-align: center;
+    position: relative;
+    top: 90px;
+    left: 150px;
+    color: #999;
+}
+#shareInfo span{
+    float: left;
+    line-height: 10px;
+    font-size: 20px;
+    font-style: oblique;
+    margin-top: 10px;
+}
+
+
+#Account{
+    width: 1000px;
+    height:400px;
+    /*background: white;*/
+    margin-top: -20px;
+}
+
+.AccountInfo{
+    width: 700px;
+    height:400px ;
+    /*background-image: url("../images/users/like2.jpg");*/
+    float: none;
+    margin-top: 20px;
+}
+
+#heart{
+    font-size: 20px;
+    float: left;
+    margin-top: 60px;
+    font-style: inherit;
+}
+#HeartInfo{
+    width: 730px;
+    height: 200px;
+    background-image: url("../images/users/like_1.jpg");
+    /*position: relative;*/
+    /*top: 10px;*/
+    margin-top: 90px;
+    /*background-color: #fff;*/
+}
+.choose{
+    text-align: center;
+    position: relative;
+    top: 90px;
+    left: 200px;
+    color: #999;
+}
+.choose:before{
+
+}
+#img11{
+    width: 140px;
+    height: 100px;
+    /*background: #B2B2B2;*/
+    padding-top: 10px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+#img img{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+#Info {
+    width: 526px;
+    height: 405px;
+    float:right;
+    /*background: #8D8D8D;*/
+    margin-left: 170px;
+    margin-top: -90px;
+}
+#Infopet{
+    height:50px;
+    /*background: #cb5977;*/
+    margin-left: 20px;
+    font-size: 30px;
+
+}
+#Infopet1{
+    height: 50px;
+    font-size: 20px;
+}
+#Info a{
+    float: left;
+    margin-left: 100px;
+
+}
+#Infogender{
+    height: 30px;
+    /*background: #1E9FFF;*/
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#gender{
+    font-size: 20px;
+}
+#birthday{
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+}
+#Info_role{
+    font-size: 20px;
+    height: 50px;
+    /*background: #1E9FFF;*/
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#introduce1{
+    font-size: 20px;
+    /*background: #8D8D8D;*/
+    margin-left: 20px;
+    position: relative;
+    top: 80px;
+}
+/*InfoShow*/
+.message{
+    position: relative;
+    top: 50px;
+    /*top: 100px;*/
+    width: 1020px;
+    /*height:927px;*/
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.message_left{
+    width: 250px;
+    height: 867px;
+    margin-top: 80px;
+    position: relative;
+    top: 20px;
+
+}
+.message_right{
+    width: 730px;
+    /*height: 927px;*/
+    /*background: white;*/
+    background-image: url("../images/users/Showa.jpg");
+
+    float:right;
+    /*background-image: url("../images/2.png");*/
+    background: white;
+    margin-top: -870px;
+}
+.message_left_Info {
+    width: 250px;
+    height: 102px;
+    background: #8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.message_left_font{
+    font-size: 20px;
+    position: relative;
+    top: 40px;
+    left: 80px;
+    text-align: center;
+    color: white;
+}
+#img1{
+    background-image: url("../images/users/Show.ico");
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    /*overflow: hidden;*/
+    /*line-height: 10px;*/
+}
+#img2{
+    background-image: url("../images/users/edit.ico");
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: -20px;
+    margin-left: 10px;
+    /*display: none;*/
+}
+#img3{
+    background-image: url("../images/users/like.ico");
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#img4{
+    background-image: url("../images/users/share.ico");
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#img5{
+    background-image: url("../images/users/play.ico");
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.message_left_font p{
+    font-size: 14px;
+    margin-left: -90px;
+    margin-top: 3px;
+    font-weight:bold;
+    text-align: center;
+}
+.message_left_editInfo{
+    width: 250px;
+    height: 102px;
+    background:#8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.message_left_address{
+    width: 250px;
+    height: 102px;
+    background: #8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.message_left_share{
+    width: 250px;
+    height: 102px;
+    background: #8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.message_left_play{
+    width: 250px;
+    height: 102px;
+    background: #8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.message_left_write{
+    width: 250px;
+    height: 102px;
+    background: #8DA7C2;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.m{
+    margin-left: -40px;
+}
+
+.message_right_img{
+    width: 162px;
+    height: 144px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+#imgUpload{
+    margin: 0px;
+    background: #f2f2f0;
+    position: absolute;
+    top: 10px;
+
+}
+.message_right_updateT{
+    width: 90px;
+    height: 40px;
+    background: #cb5977 !important;
+    margin-left: 36px;
+    margin-top: 10px;
+    display: inline-block;
+    color:white;
+
+}
+.message_right_content{
+    width: 500px;
+    height: 526px;
+
+    float: left;
+
+}
+#head{
+    width: 500px;
+    height: 37px;
+}
+#head_info{
+    padding-top: 7px;
+}
+#head #content{
+    float: right;
+    margin-top: -35px;
+    text-align: center;
+}
+#center{
+    width: 400px;
+    height: 489px;
+    background: #2D93CA;
+
+}
+#sex{
+    position: relative;
+    top: 20px;
+}
+
+.sex_person{
+    margin-left: 20px;
+    line-height: 10px;
+    font-size: 12px;
+}
+#name{
+    /*position: relative;*/
+    /*top: 40px;*/
+    margin-top: 40px;
+}
+.font_1{
+    font-size: 18px;
+}
+#pet_name{
+    margin-top: 20px;
+}
+#pole{
+    margin-top: 20px;
+}
+#time{
+    margin-top: 20px;
+}
+#year{
+    width: 100px;
+}
+#month{
+    width: 100px;
+}
+#day{
+    width: 100px;
+    font-size:14px;
+    color: initial;
+}
+#number{
+    margin-top: 20px;
+}
+.font{
+    background: #EAEAEA;
+    font-size: 14px;
+    height: 30px;
+    width: 170px;
+}
+#introduce{
+    margin-top: 20px;
+}
+#introduce_con{
+    float: left;
+    margin-left: 70px;
+    width: 400px;
+    height: 100px;
+}
+#input_button_submit{
+    display: block;
+    padding: 8px 30px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    background: #cb5977;
+    position: relative;
+    top: 30px;
+    left: 140px;
+
+
+}
+#edit1{
+    width: 1000px;
+    height:1000px;
+    /*background: white;*/
+    margin-top: -20px;
+}
+#edit{
+    width: 730px;
+    /*height: 920px;*/
+}
+#mm{
+    /*background-image: url("../images/users/Showb.jpg");*/
+    width: 730px;
+    height: 630px;
+    position: relative;
+    top: 20px;
+}
+
+/*PlayInfo*/
+#play{
+    width: 730px;
+    height: 920px;
+}

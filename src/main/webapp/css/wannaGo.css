@@ -1,0 +1,45 @@
+.general_iteam{
+    position: relative;
+    min-height: 220px;
+}
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+.css-table{
+    display: table;
+}
+.general_iteam .main-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+}
+.general_iteam .detail{
+    padding-left: 320px;
+    width: 410px;
+}
+.css-cell{
+    display: table-cell;
+}
+.padding-20{
+    padding: 20px;
+    float: left;
+    margin-left: 280px;
+    margin-top: 30px;
+}
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+.general_iteam h3{
+    width: 90%;
+}
+h3{
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+.general_iteam .price{
+    font-size: 2em;
+}

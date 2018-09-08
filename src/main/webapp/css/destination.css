@@ -1,0 +1,80 @@
+#div1{
+    width: 100%;
+    position: absolute;
+    top: 850px;
+    left: 30px;
+    z-index: 2;
+
+}
+#divimg{
+    width: 100%;
+    height: 1200px;
+    background-image: url("../images/destination/bg1.jpg");
+
+}
+.block-inline ul{
+
+    float: left;
+}
+.div2{
+    position:relative;
+    left: 70px;
+    width: 236px;
+    height: 264px;
+    background-color:#fff;
+}
+.div3{
+    width: 236px;
+    height: 180px;
+    background-color: #fff;
+    align-items: center;
+}
+.div4{
+   position: absolute;
+    top: 200px;
+    left: 10px;
+    width: 70px;
+    height: 19px;
+    background-color: #fff;
+}
+.div5{
+    position: absolute;
+    top: 220px;
+    left: 10px;
+    width: 70px;
+    height: 19px;
+    background-color: #fff;
+}
+
+
+#weixing_map_back{
+    width:100%;
+    height: 100%;
+    background-image: url("../images/destination/1.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+}
+.div3 img{
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    margin-left: 110px;
+}
+
+#weixing_map{
+    top: 170px;
+    position: relative;
+    width: 100%;
+    height: 630px;
+}
+

@@ -1,0 +1,189 @@
+.Faccess{
+    top: -110px;
+    background-color: #D3E9F6;
+    background-size: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.Fcontainer{
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.Fcol3{
+    background-color: #FFFFFF!important;
+    z-index: 99;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 1000px;
+    display: block;
+    position: relative;
+}
+.Fpadding-top-40{
+    padding-top: 20px;
+}
+.Fpadding-20{
+    padding: 40px;
+}
+.Fright{
+    display: block;
+    float: right;
+}
+.Faccess .Freview-wrapper .Fwrite-review{
+    /*width: 80px;*/
+    margin-left: 70px;
+}
+.Fmargin-left-10{
+    margin-left: 10px;
+}
+.Fmargin-top-5{
+    margin-top: 5px;
+}
+.Faccess .Fcontrol-bar{
+    background-color: #629eda;
+    width: auto;
+    margin-left: -6px;
+    padding: 10px 26px;
+    height: 40px;
+}
+.Fcolor-white{
+    color: #FFFFFF;
+}
+.Frelative{
+    position: relative;
+}
+.Faccess .Fcontrol-bar .Fcorner-left{
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid #2d4d74;
+    border-top: 3px solid #2d4d74;
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+.Faccess .Fcontrol-bar .Fcorner-right {
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #2d4d74;
+    border-top: 3px solid #2d4d74;
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+.Fcontrol-bar .Ffilter {
+    width: 20px;
+    height: 18px;
+    background: #fff;
+    color: #629eda;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Fmargin-left-20 {
+    margin-left: 20px;
+}
+.Fwrite-review{
+    cursor: pointer;
+}
+.Freview-iteam{
+    color: #666666;
+}
+.Frelative{
+    position:relative;
+}
+.Favatar{
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.60);
+    border-radius: 100%;
+}
+.Freview-iteam .Favatar{
+    width: 90px;
+    height: 90px;
+}
+.Fleft{
+    float: left;
+}
+.Freview-iteam .Fuser-name{
+    font-size: 1.2em;
+}
+.Fmargin-top-20{
+    margin-top: 20px;
+}
+.Freview-iteam .Fdetail{
+    font-size: 0.9em;
+    padding: 30px;
+    width: 730px;
+    right: 70px;
+    top: 10px;
+    background-color: #e3e4e5;
+}
+.Freview-item .Fseparator.Fsolid {
+    background-color: #d6d6d6;
+}
+
+.Fseparator.Fsolid {
+    height: 1px;
+    background: #c8c8c8;
+}
+.Fseparator {
+    width: 100%;
+    height: 0;
+    text-indent: -9000px;
+    border: none;
+    background: none;
+}
+.Fmargin-bottom-5 {
+    margin-bottom: 5px;
+}
+.Fmargin-top-5 {
+    margin-top: 5px;
+}
+.Fmargin-bottom-10{
+    margin-bottom: 10px;
+}
+.Freview-iteam .Fcontent{
+    width: 400px;
+}
+.Freview-iteam .Freview-text{
+    height: 100px;
+    word-break: break-all;
+}
+.Fcolor-default{
+    color: #333333;
+}
+.Foverall-rating{
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+ul.Fno-bullets{
+    list-style: none;
+}
+.Frating-title{
+    float: left;
+    width: 70px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 1.3em;
+}
+.Foverall-rating .Foverall-score{
+    width: 70px;
+    text-align: right;
+    color: #cb5977;
+    margin-left: 10px;
+}
+.Foverall-rating .Fscore{
+    font-size: 1.7em;
+    margin-right: 3px;
+}
+.Freview-list-wrapper{
+    height: 250px;
+    padding: 10px;
+}

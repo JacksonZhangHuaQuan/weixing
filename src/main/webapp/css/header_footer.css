@@ -403,6 +403,7 @@ header结束
     top: 25px;
     width: 100%;
     position: relative;
+    z-index: 6;
 }
 
 .scroll_header::after{

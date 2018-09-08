@@ -1,0 +1,43 @@
+/* === Basic reset === */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+a > img {
+    border: none;
+}
+
+header, footer, article, section, nav, aside {
+    display: block;
+    position: relative;
+}
+a{
+    color:#cb5977 ; ;
+}
+.ie a img {
+    border: none;
+}
+
+/* === General === */
+body, html {
+    min-width: 1100px; /* Dirty temporary hack that even doesn't work well for body and html behaving stupidly */
+}
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: 'Montserrat', 'STHeiti', 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.4em;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}

@@ -1,0 +1,109 @@
+#fabuyouji{
+    font-weight: bold;
+    font-family: "Helvetica", "Microsoft YaHei", Arial, sans-serif;
+}
+#addStrategy {
+    font-size: 16px;
+    overflow: auto;
+    overflow-x: hidden; /*禁止横向的滚动条*/
+    width: 730px;
+    margin: auto;
+    height: 850px;
+    background-color: #f0f3ef;
+
+}
+
+.layui-form {
+    width: 730px;
+    margin: auto;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.layui-upload {
+    padding-left: 25px;
+    margin-top: 5px;
+}
+
+.layui-timeline {
+    margin-left: 25px;
+}
+.text{
+    min-height: 50px;
+}
+.right{
+    width: 560px;
+}
+.submit{
+    margin: 0;
+    text-align: center;
+}
+.submit  button{
+    width: 100px;
+}
+.first_img{
+    margin-left: 40px;
+    width: 100px;
+    float: none;
+}
+/*图片上传相关*/
+/*自定义*/
+.showFirstImg{
+    display: none;
+    float: right;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+#showFirstImg{
+    margin-left: 20px;
+    height:70px ;
+    width:100px;
+}
+.upload-img {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    margin: 0 10px 10px 0;
+    border-radius: 4px;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    margin-top: 15px;
+}
+
+.layui-upload-img {
+    width: 200px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.upload-img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,1);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+}
+
+.upload-img input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.upload-img button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 6px;
+}
+#upload_imgs{
+    margin-left: 13px;
+}
+.submit{
+    margin-top: -10px;
+}

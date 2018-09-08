@@ -1,0 +1,390 @@
+
+/*轮播图*/
+.slidershow{
+    z-index: 1;
+}
+.carout_wrapper{
+    display: block;
+    text-align: start;
+    float: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: auto;
+    width: 1349px;
+    height: 540px;
+    margin: 0px;
+    overflow: hidden;
+}
+.package-carousel{
+    width: 100%;
+    min-width:1000px;
+    min-height: 440px;
+}
+
+/*显示部分*/
+.Fbg-image-clouds{
+    top: -80px;
+    background-image: url("../image/bg-image-clouds.jpg");
+    background-size: 100%;
+    background-color: #D3E9F6;
+    background-repeat: no-repeat;
+    height: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+
+}
+.Fsection-padding{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.Fmargin-bottom-20 {
+    margin-bottom: 20px;
+}
+.Fcol1{
+    float: left;
+    width: 660px;
+    display: block;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+.Fmargin-bottom-40{
+    margin-bottom: 40px;
+}
+.Fbg-gr-pink{
+    background: #CA5876;
+    height: 40px;
+}
+.Ftabs-control{
+    padding: 0 10px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.Ftabs-wrap.pink .Ftabs-control a.Factive{
+    color: #af5576;
+    background-color: #FFFFFF;
+}
+.Fgroup-detail-tabs .Ftabs-control.Ftwo-tabs a{
+    width: 300px;
+}
+.Ftabs-control .Factive{
+    margin-top: -4px;
+    padding-top: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #ffffff;
+}
+.Ftabs-control a {
+    float: left;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+/*右边登录*/
+.Fcol2{
+    float: left;
+    width: 320px;
+    display: block;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Frating-sidebar{
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 20px;
+    height: 280px;
+}
+.Ftext-center{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: 1.4em;
+    float: left;
+    margin-right: 20px;
+}
+.Frating-sidebar .Fribbon-button {
+    right: -32px;
+    width: 110px;
+    text-align: right;
+    font-size: 0.9em;
+    padding-left: 0;
+}
+.Fribbon-button.Fdark-pink{
+    background-color: #a680a0;
+}
+.Fcolor-white{
+    color: #FFFFFF;
+}
+.Fright{
+    float: right;
+}
+.Fribbon-button {
+    display: block;
+    position: relative;
+    right: -12px;
+    height: 44px;
+    padding: 0 20px;
+    line-height: 44px;
+}
+.Fribbon-button.Fdark-pink .Ftail{
+    background-position: -68px 0;
+}
+.Fribbon-button .Ftail{
+    top:0;
+    left: -17px;
+    width: 17px;
+    height: 44px;
+    position: absolute;
+    background: url("../images/ribbon-button-sprite.png");
+}
+.Fribbon-button.Fdark-pink .Ffold{
+    background-position: -48px -44px;
+}
+.Fribbon-button .Ffold{
+    bottom: -9px;
+    right: 0;
+    width: 12px;
+    height: 9px;
+    position: absolute;
+    background: url("../images/ribbon-button-sprite.png");
+}
+.Frating-sidebar .Fbutton-wrapper{
+    width: 300px;
+}
+.Ftext-center{
+    text-align: center;
+}
+.Frating-sidebar .Fwrite-review{
+    display: inline-block;
+}
+.Fbtn-expand{
+    cursor: pointer;
+}
+.Fbutton{
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;
+    padding: 8px 30px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #A46F7B;
+    background: linear-gradient(to bottom, #d78393 0%, #b74966 100%);
+}
+.Fexpand{
+    float: right;
+    text-align: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/*右边想去哪*/
+.Fwanna-go{
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+    height: 340px;
+}
+.Fwanna-go .Fribbon-button{
+    right: -32px;
+    width: 110px;
+    text-align: right;
+    font-size: 0.9em;
+    padding-left: 0;
+}
+.Fcolor-white{
+    color: #FFFFFF;
+}
+.Fribbon-button.Fpink{
+    background: #c85674;
+}
+.Fribbon-button{
+    display: block;
+    position: relative;
+    height: 44px;
+    padding: 0 20px;
+    line-height: 44px;
+}
+.Fribbon-button.Fpink .Ftail{
+    background-position: -51px 0;
+}
+.Fribbon-button .Ftail{
+    top: 0;
+    left: -16px;
+    width: 17px;
+    height: 44px;
+    position: absolute;
+    background: url("../images/ribbon-button-sprite.png");
+}
+.Fribbon-button.Fpink .Ffold{
+    background-position: -36px -44px;
+}
+.Fribbon-button .Ffold{
+    bottom: -9px;
+    right: 0;
+    width: 12px;
+    height: 9px;
+    position: absolute;
+    background: url("../images/ribbon-button-sprite.png");
+}
+.Fwanna-go .Fcarousel{
+    position: relative;
+    float: left;
+    width: 270px;
+    height: 96px;
+    padding: 0 20px 0 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.Fuser-picture{
+    display: block;
+    text-align: start;
+    float: none;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: auto;
+    width: 270px;
+    height: 95px;
+    margin: 0px;
+    overflow: hidden;
+}
+.Fwanna-go-user{
+    text-align: left;
+    float: none;
+    position: absolute;
+    top: 0px;
+    right: auto;
+    bottom: auto;
+    left: 0px;
+    margin: 0px;
+    width: 2970px;
+    height: 95px;
+}
+.Fwanna-go .Fcarousel span{
+    width: 85px;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    height: 95px;
+    display: block;
+
+}
+.Fwanna-go .Fcarousel .Favatar{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 2px 2px 4px rgba(114, 114, 114, 0.40);
+}
+.Favatar{
+    border-radius: 100%;
+}
+.Favatar .Favatar-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.Fwanna-go .Fcarousel .Favatar a p{
+    color: #465562;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-left: 19px;
+}
+.Fmargin-left-20{
+    float: left;
+    margin-left: 20px;
+}
+.Ftext-left{
+    text-align: left;
+}
+/*中间展示部分*/
+.Ftabs-wrap.pink .Ftab{
+    background-color: #FFFFFF;
+}
+.Ftabs-wrap .Ftab .Factive{
+    display: block !important;
+}
+.Ftabs-wrap .Ftab{
+    padding: 30px ;
+}
+        /*中间地图区域*/
+.Fitinerary-map-wrapper{
+    width: 660px;
+    height: 420px;
+    margin-bottom: 20px;
+    left: 0px;
+    top: -40px;
+}
+
+.Frelative{
+    position: relative;
+}
+       /*中间展示攻略区域*/
+ul.Fsimple-bullets{
+    color: #464646;
+    font-size: 0.9em;
+}
+ul.Fsimple-bullets li{
+    list-style: none;
+    padding-left: 10px;
+    font-family: "Helvetica", "Microsoft YaHei", Arial, sans-serif;
+}
+.Fitinerary-list h3{
+    font-size: 1.3em;
+}
+.center{
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    margin-bottom: 10px;
+    line-height: 2em;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+.Fborder-sloid{
+    height: 2px;
+    width: 100%;
+    border: 1px dashed #c3b5d4;
+    position: absolute;
+    top: 500px;
+}
+.btn_share {
+    cursor: pointer;
+    width: 92px;
+    height: 20px;
+    display: block;
+    margin: 0px 0px 10px;
+}
+.btn_like {
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    display: block;
+    position: relative;
+    margin: 0px 0px 10px;
+    left: 13px;
+}
